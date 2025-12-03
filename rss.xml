@@ -1,1 +1,34 @@
-﻿rss.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>H VIRAL LAB – Digital Acquisition R&D</title>
+    <link>https://hvirallab.co.kr/</link>
+    <description>에이치바이럴 LAB – 디지털 유입 R&D, 풀퍼널 마케팅 분석, 데이터 기반 자동화 연구</description>
+    <language>ko</language>
+
+    <item>
+      <title>LAB Introduction – 디지털 유입 시스템 R&D</title>
+      <link>https://hvirallab.co.kr/introduction</link>
+      <description>브랜드 유입 흐름 분석, 자동화 운영 시스템, 데이터 기반 풀퍼널 구조 연구</description>
+    </item>
+
+    <item>
+      <title>Insight – Data-driven Marketing Funnel</title>
+      <link>https://hvirallab.co.kr/insight</link>
+      <description>검색·탐색·신뢰·전환 단계별 디지털 퍼널 설계 인사이트</description>
+    </item>
+
+    <item>
+      <title>Case Study – 산업별 유입 성과 분석</title>
+      <link>https://hvirallab.co.kr/casestudy</link>
+      <description>업종별 디지털 유입 구조 연구 및 성과 사례</description>
+    </item>
+
+    <item>
+      <title>Data Lab – H VIRAL Technical Structure</title>
+      <link>https://hvirallab.co.kr/datalab</link>
+      <description>데이터 기반 자동화 시스템, 운영 프레임워크, 기술적 분석 구조</description>
+    </item>
+
+  </channel>
+</rss>

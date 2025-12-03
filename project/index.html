@@ -2,20 +2,20 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>PROJECT | H VIRAL LAB</title>
+  <title>H VIRAL LAB | 프로젝트 아카이브</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="icon" type="image/svg+xml" href="/favicon-16x16.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { width: 100%; max-width: 100%; overflow-x: hidden; scroll-behavior: smooth; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
-      background: radial-gradient(circle at top left, #1f3b78, #020617 55%, #000 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+        "Noto Sans KR", system-ui, sans-serif;
+      background: radial-gradient(circle at top left, #1f3b78 0, #020617 55%, #000 100%);
       color: #e5e7eb;
       line-height: 1.6;
       min-height: 100vh;
@@ -23,174 +23,202 @@
 
     a { color: inherit; text-decoration: none; }
     ul { list-style: none; }
-
     .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-    /* 헤더 */
     header {
       position: sticky; top: 0; z-index: 50;
       backdrop-filter: blur(14px);
-      background: rgba(3, 7, 18, 0.8);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+      background: linear-gradient(to bottom, rgba(3,7,18,0.9), rgba(3,7,18,0.6));
+      border-bottom: 1px solid rgba(148,163,184,0.3);
     }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
 
-    .nav {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 64px;
-    }
-
-    .logo-area { display: flex; flex-direction: column; }
+    .logo-area { display: flex; flex-direction: column; justify-content: center; }
     .logo-main { font-size: 20px; font-weight: 800; letter-spacing: 0.08em; }
-    .logo-sub { font-size: 11px; color: #9ca3af; letter-spacing: 0.16em; text-transform: uppercase; }
+    .logo-sub { font-size: 11px; color: #9ca3af; letter-spacing: 0.16em; margin-top: 2px; }
 
     .nav-menu { display: flex; align-items: center; gap: 26px; font-size: 14px; }
     .nav-menu a { position: relative; padding-bottom: 4px; color: #d1d5db; white-space: nowrap; }
     .nav-menu a:hover { color: #fff; }
-
-    .nav-menu a::after {
-      content: ""; position: absolute; left: 0; bottom: 0;
-      width: 0; height: 2px;
-      background: linear-gradient(to right, #38bdf8, #818cf8);
-      border-radius: 999px;
-      transition: width 0.18s ease-out;
-    }
-
-    .nav-menu a:hover::after { width: 100%; }
-
     .nav-group {
       padding: 6px 14px; border-radius: 999px;
-      border: 1px solid rgba(129, 140, 248, 0.6);
-      background: rgba(56, 189, 248, 0.1);
-    }
-    .nav-group:hover { background: rgba(129, 140, 248, 0.25); }
-
-    section {
-      padding: 40px 0;
-      border-top: 1px solid rgba(51, 65, 85, 0.7);
-      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.9), #020617 60%);
+      border: 1px solid rgba(129,140,248,0.6);
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.16), transparent 55%);
+      font-size: 13px;
     }
 
-    .section-header { margin-bottom: 16px; }
-    .section-kicker {
-      font-size: 11px; letter-spacing: 0.18em;
-      text-transform: uppercase; color: #9ca3af;
+    main { padding: 64px 0 56px; }
+    .page-kicker {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: #9ca3af;
+      text-transform: uppercase;
+      margin-bottom: 6px;
     }
-    .section-title { font-size: 22px; font-weight: 700; }
-    .section-desc { margin-top: 10px; font-size: 14px; color: #cbd5f5; }
+    .page-title {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+    .page-desc {
+      font-size: 14px;
+      color: #cbd5f5;
+      max-width: 640px;
+    }
 
-    .project-wrap {
-      margin-top: 22px;
+    .project-grid {
+      margin-top: 28px;
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
-      gap: 24px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
     }
 
-    .project-box, .card {
-      border-radius: 20px;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      background: radial-gradient(circle at top left, rgba(30, 64, 175, 0.6), rgba(15, 23, 42, 0.95));
-      padding: 20px 18px 18px;
-      box-shadow: 0 22px 48px rgba(15, 23, 42, 0.8);
+    .project-card {
+      border-radius: 18px;
+      border: 1px solid rgba(55,65,81,0.9);
+      background: radial-gradient(circle at top left, rgba(30,64,175,0.55), rgba(15,23,42,0.98));
+      padding: 18px 18px 16px;
+      box-shadow: 0 20px 45px rgba(15,23,42,0.8);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .project-tag {
+      font-size: 11px;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .project-name {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .project-text {
+      font-size: 13px;
+      color: #d1d5db;
+      margin-top: 2px;
     }
 
-    .project-box h3, .card h3 {
-      font-size: 15px; margin-bottom: 8px;
+    .project-link {
+      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.8);
+      transition: background 0.18s ease-out, transform 0.16s ease-out, box-shadow 0.18s ease-out;
     }
-
-    .list-dot { padding-left: 16px; margin-top: 10px; }
-    .list-dot li { font-size: 13px; margin-bottom: 4px; color: #d1d5db; }
-
-    .btn-row { margin-top: 16px; }
-    .ghost-btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 8px 16px; border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.7);
-      font-size: 12px; transition: 0.2s;
-    }
-    .ghost-btn:hover {
-      background: rgba(56, 189, 248, 0.25);
+    .project-link span.icon { font-size: 14px; }
+    .project-link:hover {
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.24), rgba(15,23,42,0.95));
       transform: translateY(-1px);
       box-shadow: 0 14px 32px rgba(15,23,42,0.9);
     }
 
     footer {
-      border-top: 1px solid rgba(31,41,55,0.8);
-      padding: 18px 0;
+      border-top: 1px solid rgba(31,41,55,0.9);
+      padding: 18px 0 22px;
+      font-size: 11px;
       text-align: center;
-      font-size: 12px;
       color: #9ca3af;
       background: #020617;
     }
 
     @media (max-width: 900px) {
-      .project-wrap { grid-template-columns: 1fr; }
+      .project-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
     }
-
+    @media (max-width: 640px) {
+      .nav { flex-direction: column; align-items: flex-start; gap: 8px; height: auto; padding: 10px 0 8px; }
+      .nav-menu { flex-wrap: wrap; gap: 16px; font-size: 13px; }
+      .project-grid { grid-template-columns: minmax(0,1fr); }
+      .page-title { font-size: 22px; }
+    }
   </style>
 </head>
-
 <body>
   <header>
     <div class="container nav">
       <a href="/" class="logo-area">
         <span class="logo-main">H VIRAL LAB</span>
-        <span class="logo-sub">R&amp;D · RESEARCH &amp; INSIGHT</span>
+        <span class="logo-sub">R&D · RESEARCH &amp; INSIGHT</span>
       </a>
-
       <nav class="nav-menu">
         <a href="/introduction/">소개</a>
         <a href="/insight/">인사이트</a>
         <a href="/case/">연구사례</a>
         <a href="/datalab/">데이터랩</a>
         <a href="/project/">프로젝트</a>
-        <a href="https://hviral.co.kr" class="nav-group" target="_blank">H VIRAL GROUP</a>
+        <a href="https://hviral.co.kr" target="_blank" class="nav-group">H VIRAL GROUP</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="container">
-      <div class="section-header">
-        <div class="section-kicker">PROJECT</div>
-        <div class="section-title">프로젝트 안내</div>
-        <p class="section-desc">
-          H VIRAL LAB은 디지털 유입 구조를 연구·개발하는 R&D 센터로,
-          프로젝트 단위로 브랜드의 유입·전환 시스템을 설계합니다.
-        </p>
-      </div>
+    <div class="container">
+      <div class="page-kicker">PROJECT ARCHIVE</div>
+      <h1 class="page-title">디지털 유입 시스템 프로젝트</h1>
+      <p class="page-desc">
+        H VIRAL LAB은 업종별 환경과 고객 여정을 기준으로 디지털 유입 구조를 설계·검증합니다.
+        아래 프로젝트는 (주)에이치바이럴이 실제 시장 데이터를 바탕으로 연구·정리한
+        대표적인 디지털 유입 시스템 R&amp;D 사례입니다.
+      </p>
 
-      <div class="project-wrap">
-        <div class="project-box">
-          <h3>연구·개발 범위</h3>
-          <ul class="list-dot">
-            <li>디지털 유입 구조 진단 및 모델링</li>
-            <li>고객 여정 기반 마케팅 풀퍼널 설계</li>
-            <li>데이터 기반 자동화 시스템 및 운영 OS 설계</li>
-            <li>산업별 환경에 맞는 디지털 유입 시스템 개발</li>
-          </ul>
-
-          <div class="btn-row">
-            <a class="ghost-btn" href="https://hviral.co.kr" target="_blank">
-              ↗ H VIRAL GROUP 바로가기
-            </a>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>역할 분리 원칙</h3>
-          <p>
-            H VIRAL LAB은 디지털 인프라와 유입 구조를 연구·설계하는 R&D 조직이며,
-            실제 운영·상담은 H VIRAL Group(본사)에서 담당합니다.
+      <div class="project-grid">
+        <!-- 1. 로컬 서비스 -->
+        <article class="project-card">
+          <div class="project-tag">PROJECT 01 · LOCAL SERVICE</div>
+          <div class="project-name">로컬 서비스 디지털 풀퍼널 구조</div>
+          <p class="project-text">
+            동네 상권·로컬 서비스 브랜드의 검색–탐색–비교–문의까지 이어지는
+            디지털 유입 풀퍼널을 설계하고, 에이치바이럴의 계량 모델로
+            유입·전환 데이터를 구조화한 프로젝트입니다.
           </p>
-        </div>
+          <a class="project-link" href="/project/local-funnel/">
+            <span class="icon">↗</span>
+            <span>프로젝트 상세 보기</span>
+          </a>
+        </article>
+
+        <!-- 2. 헬스케어 -->
+        <article class="project-card">
+          <div class="project-tag">PROJECT 02 · HEALTHCARE</div>
+          <div class="project-name">의료·헬스케어 진료/상담 유입 구조</div>
+          <p class="project-text">
+            피부과·의원·헬스케어 서비스의 온라인 진료·상담 신청 구조를 분석하고,
+            에이치바이럴 LAB 기준으로 상담 전·후 이탈 구간을 재설계한
+            디지털 유입 시스템 프로젝트입니다.
+          </p>
+          <a class="project-link" href="/project/healthcare-intake/">
+            <span class="icon">↗</span>
+            <span>프로젝트 상세 보기</span>
+          </a>
+        </article>
+
+        <!-- 3. B2B -->
+        <article class="project-card">
+          <div class="project-tag">PROJECT 03 · B2B SERVICE</div>
+          <div class="project-name">B2B 리드 생성·문의 시스템</div>
+          <p class="project-text">
+            B2B 서비스 브랜드의 리드 생성 구조를 설계하고,
+            검색 키워드–레퍼런스 콘텐츠–상담 요청까지 이어지는
+            단계별 유입 시스템을 에이치바이럴의 R&amp;D 프레임으로 정리한 프로젝트입니다.
+          </p>
+          <a class="project-link" href="/project/b2b-leads/">
+            <span class="icon">↗</span>
+            <span>프로젝트 상세 보기</span>
+          </a>
+        </article>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer>
-    © H VIRAL LAB — 디지털 유입 구조 R&D 아카이브
+    © H VIRAL LAB. All rights reserved.  
+    본 사이트는 디지털 유입 구조 R&amp;D로 운영됩니다.
   </footer>
-
 </body>
 </html>

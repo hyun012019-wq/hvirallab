@@ -73,7 +73,7 @@
       padding: 0 20px;
     }
 
-    /* 헤더 */
+    /* 헤더 (PC 공통) */
     header {
       position: sticky;
       top: 0;
@@ -223,12 +223,17 @@
         padding: 0 16px;
       }
 
+      /* ✅ 모바일에서 헤더 구조 분리: 위에 로고, 아래에 메뉴, 둘 다 가운데 정렬 */
       .nav {
         height: auto;
         padding: 10px 0 8px;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;   /* 가운데 정렬 */
         gap: 8px;
+      }
+
+      .logo-area {
+        align-items: center;   /* 로고 텍스트도 가운데로 */
       }
 
       .logo-main {
@@ -246,6 +251,8 @@
         row-gap: 8px;
         column-gap: 18px;
         font-size: 13px;
+        justify-content: center; /* 메뉴 가운데 정렬 */
+        text-align: center;
       }
 
       .nav-menu a {
@@ -371,4 +378,3 @@
   </script>
 </body>
 </html>
-

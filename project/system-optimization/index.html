@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>PROJECT 03 | System Rebuilding & Optimization – H VIRAL LAB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Meta -->
+  <meta name="description" content="에이치바이럴 마케팅 R&D 조직의 PROJECT 03. 운영 중인 디지털 유입 구조를 분석하고 System Rebuilding & Optimization을 수행하는 프로젝트입니다.">
+  <meta name="keywords" content="에이치바이럴, 에이치바이럴 마케팅, 에이치바이럴 광고, System Rebuilding, Funnel Optimization, H VIRAL LAB">
+
+  <!-- OG -->
+  <meta property="og:title" content="PROJECT 03 | System Rebuilding & Optimization – H VIRAL LAB">
+  <meta property="og:description" content="기존 디지털 유입 구조를 재해석하고 전환 효율을 극대화하는 System Rebuilding & Optimization 프로젝트입니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hvirallab.co.kr/project/system-optimization/">
+  <meta property="og:image" content="https://hvirallab.co.kr/og-image-wide.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PROJECT 03 | System Rebuilding & Optimization – H VIRAL LAB">
+  <meta name="twitter:description" content="에이치바이럴 마케팅 조직이 보유한 데이터 분석 모델을 활용해 기존 디지털 유입 구조를 재설계하는 프로젝트입니다.">
+  <meta name="twitter:image" content="https://hvirallab.co.kr/og-image-wide.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon-16x16.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+        "Noto Sans KR", system-ui, sans-serif;
+      background: radial-gradient(circle at top left, #1f3b78 0, #020617 55%, #000 100%);
+      color: #e5e7eb;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 헤더 공통 */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom,
+        rgba(3, 7, 18, 0.9),
+        rgba(3, 7, 18, 0.6)
+      );
+      border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo-area {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .logo-main {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .logo-sub {
+      font-size: 11px;
+      color: #9ca3af;
+      letter-spacing: 0.16em;
+      margin-top: 2px;
+    }
+
+    .logo-area,
+    .logo-main,
+    .logo-sub {
+      white-space: nowrap;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 14px;
+      flex-wrap: nowrap;
+    }
+
+    .nav-menu a {
+      position: relative;
+      padding-bottom: 4px;
+      color: #d1d5db;
+    }
+
+    .nav-menu a:hover {
+      color: #ffffff;
+    }
+
+    /* 페이지 히어로 */
+    .page-hero {
+      padding: 80px 0 40px;
+    }
+
+    .page-kicker {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #9ca3af;
+    }
+
+    .page-title {
+      margin-top: 12px;
+      font-size: 26px;
+      font-weight: 800;
+    }
+
+    .page-sub {
+      margin-top: 14px;
+      font-size: 14px;
+      color: #cbd5f5;
+    }
+
+    .page-sub strong {
+      font-weight: 700;
+    }
+
+    .section {
+      padding: 10px 0 40px;
+    }
+
+    .section-title {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 10px;
+    }
+
+    .section-box {
+      border-radius: 18px;
+      padding: 18px 20px 18px;
+      background: radial-gradient(circle at top left,
+        rgba(34, 197, 94, 0.18),
+        rgba(15, 23, 42, 0.96)
+      );
+      border: 1px solid rgba(148, 163, 184, 0.6);
+    }
+
+    .section-box h2 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .section-box p {
+      font-size: 13px;
+      color: #e5e7eb;
+    }
+
+    .list {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #e5e7eb;
+    }
+
+    .list li {
+      position: relative;
+      padding-left: 14px;
+      margin-top: 4px;
+    }
+
+    .list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #4ade80;
+    }
+
+    footer {
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 18px 0 22px;
+      font-size: 11px;
+      text-align: center;
+      color: #9ca3af;
+      background: #020617;
+      margin-top: 40px;
+    }
+
+    /* 모바일 */
+    @media (max-width: 768px) {
+      .container { padding: 0 16px; }
+
+      .nav {
+        height: auto;
+        padding: 10px 0 8px;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .logo-area { align-items: center; }
+      .logo-main { font-size: 18px; }
+      .logo-sub { font-size: 9px; letter-spacing: 0.14em; }
+
+      .nav-menu {
+        width: 100%;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        column-gap: 18px;
+        font-size: 13px;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .nav-menu a { padding-bottom: 2px; }
+
+      .page-hero { padding: 60px 0 32px; }
+      .page-title { font-size: 23px; }
+      .page-sub { font-size: 13px; }
+    }
+
+    @media (max-width: 420px) {
+      .page-title { font-size: 21px; }
+      .page-sub { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="/" class="logo-area">
+        <span class="logo-main">H VIRAL LAB</span>
+        <span class="logo-sub">R&D · RESEARCH &amp; INSIGHT</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="/introduction/">소개</a>
+        <a href="/insight/">인사이트</a>
+        <a href="/case/">연구사례</a>
+        <a href="/datalab/">데이터랩</a>
+        <a href="/project/">프로젝트</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-kicker">PROJECT 03 · SYSTEM OPTIMIZATION</div>
+        <h1 class="page-title">System Rebuilding &amp; Optimization</h1>
+        <p class="page-sub">
+          운영 중인 디지털 유입 구조를 에이치바이럴 마케팅 R&amp;D 조직의
+          <strong>데이터 분석 모델</strong>로 다시 읽어내고,
+          전환 효율과 안정성을 동시에 높이는 방향으로 재설계하는 프로젝트입니다.<br>
+          실제 유입·전환 데이터에 기반해 문제 구간을 추출하고,
+          에이치바이럴 광고 및 운영 전략과 자연스럽게 연결되는 구조를 완성합니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- 목적 -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">PROJECT OBJECTIVE</div>
+        <div class="section-box">
+          <h2>기존 구조의 한계 진단과 구조적 개선</h2>
+          <p>
+            이미 운영 중인 구조를 완전히 변경하기보다는,
+            실제 이용자의 행동 흐름을 기준으로 병목 구간을 찾아내고
+            필요한 부분만 정교하게 재구성하는 것이 프로젝트의 핵심입니다.
+          </p>
+          <ul class="list">
+            <li>전환 경로 상의 Bottleneck 구간 탐지</li>
+            <li>중복·불필요 단계 제거 및 재배치</li>
+            <li>장기 운영을 전제로 한 구조 안정성 검토</li>
+            <li>에이치바이럴 광고 전략과 호환되는 구조 설계</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 방법론 -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">METHODOLOGY</div>
+        <div class="section-box">
+          <h2>Real-User Behavior 기반 Re-Architecture</h2>
+          <p>
+            PROJECT 03은 대시보드 수치만 보는 것이 아니라,
+            실제 이용자의 행동 로그를 기반으로 구조를 재해석합니다.
+          </p>
+          <ul class="list">
+            <li>Real-User Behavior Log 분석 및 Funnel 재구성</li>
+            <li>Conversion Path 상의 Drop-Off Pattern 추출</li>
+            <li>System Rebuilding Scenario 설계 및 검증</li>
+            <li>Iteration을 통한 최종 구조 고도화</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 산출물 -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">OUTPUT</div>
+        <div class="section-box">
+          <h2>Optimization Blueprint &amp; 운영 레퍼런스</h2>
+          <p>
+            프로젝트 결과물은 에이치바이럴 마케팅 조직 및 파트너 브랜드가
+            장기적으로 참고할 수 있는 구조 기준으로 정리됩니다.
+          </p>
+          <ul class="list">
+            <li>System Rebuilding &amp; Optimization Blueprint</li>
+            <li>Before &amp; After Conversion Performance Report</li>
+            <li>에이치바이럴 광고·운영 구조 연계 가이드</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © H VIRAL LAB. All rights reserved.
+    본 페이지는 에이치바이럴 마케팅 R&amp;D 조직의 PROJECT 03 소개용으로 운영됩니다.
+  </footer>
+</body>
+</html>

@@ -6,56 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- 기본 메타 -->
-  <meta name="description" content="H VIRAL LAB 소개 페이지. 에이치바이럴은 디지털 유입 구조를 연구하고 산업별 풀퍼널을 분석하는 전문 R&D 조직입니다.">
-  <meta name="keywords" content="에이치바이럴 연구소, H VIRAL LAB, 디지털 유입 연구, 마케팅 R&D, 유입 구조 분석">
+  <meta name="description" content="H VIRAL LAB 소개 페이지. 디지털 유입 구조를 연구하고 산업별 고객 여정·검색 패턴·전환 구조를 분석하는 에이치바이럴의 전문 R&D 연구소입니다.">
+  <meta name="keywords" content="H VIRAL LAB, 에이치바이럴 연구소, 디지털 유입 구조 연구, 마케팅 R&D, 풀퍼널 분석">
 
-  <!-- 기본 OG 태그 -->
-<meta property="og:title" content="H VIRAL LAB | 디지털 유입 시스템 R&D 센터">
-<meta property="og:description" content="브랜드의 온라인 유입 흐름을 기반으로 디지털 유입 시스템을 연구·개발하는 전문 R&D 센터입니다.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hvirallab.co.kr">
-
-<!-- 정사각형 OG 이미지 -->
-<meta property="og:image" content="https://hvirallab.co.kr/og-image.png">
-
-<!-- 가로형 OG 이미지 (SNS 확대 미리보기용) -->
-<meta property="og:image" content="https://hvirallab.co.kr/og-image-wide.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-
-<!-- 트위터 카드 -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="H VIRAL LAB | 디지털 유입 시스템 R&D 센터">
-<meta name="twitter:description" content="브랜드의 온라인 유입 흐름을 기반으로 디지털 유입 시스템을 연구·개발하는 전문 R&D 센터입니다.">
-<meta name="twitter:image" content="https://hvirallab.co.kr/og-image-wide.png">
-
-  <!-- Open Graph (SNS/카톡/네이버 미리보기 강화) -->
-  <meta property="og:title" content="H VIRAL LAB 소개 | 에이치바이럴 디지털 유입 연구소">
-  <meta property="og:description" content="브랜드 유입·전환 구조를 데이터 기반으로 연구하는 에이치바이럴 R&D 조직. 디지털 유입 시스템과 산업별 고객 여정 분석.">
+  <!-- OG 태그 -->
+  <meta property="og:title" content="H VIRAL LAB 소개 | 디지털 유입 시스템 연구소">
+  <meta property="og:description" content="브랜드의 디지털 유입 구조를 데이터 기반으로 연구·분석하는 에이치바이럴 R&D 조직입니다.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hvirallab.co.kr/introduction/">
-  <meta property="og:image" content="https://hvirallab.co.kr/og-image.png">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="H VIRAL LAB 소개 | 에이치바이럴 디지털 유입 연구소">
-  <meta name="twitter:description" content="디지털 유입 구조와 고객 여정 기반 R&D 전문 조직, 에이치바이럴 LAB">
-  <meta name="twitter:image" content="https://hvirallab.co.kr/og-image.png">
-
-  <meta property="og:title" content="H VIRAL LAB | 디지털 유입 시스템 R&D 센터">
-<meta property="og:description" content="브랜드의 온라인 유입 구조를 연구·개발하는 H VIRAL LAB 공식 페이지입니다.">
-<meta property="og:image" content="https://hvirallab.co.kr/og-image.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hvirallab.co.kr">
+  <meta property="og:image" content="https://hvirallab.co.kr/og-image-wide.png">
 
   <!-- 파비콘 -->
   <link rel="icon" type="image/svg+xml" href="/favicon-16x16.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-</head>
 
- <style>
+  <!-- 스타일 — 다른 페이지들과 100% 동일 -->
+  <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { width: 100%; max-width: 100%; overflow-x: hidden; scroll-behavior: smooth; }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
@@ -68,16 +42,21 @@
 
     a { color: inherit; text-decoration: none; }
     ul { list-style: none; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-   
-    /* 헤더 */
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 헤더 구조 — 통일 */
     header {
       position: sticky;
       top: 0;
       z-index: 50;
       backdrop-filter: blur(14px);
-      background: linear-gradient(to bottom, rgba(3, 7, 18, 0.9), rgba(3, 7, 18, 0.6));
-      border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+      background: linear-gradient(to bottom, rgba(3,7,18,0.9), rgba(3,7,18,0.6));
+      border-bottom: 1px solid rgba(148,163,184,0.3);
     }
 
     .nav {
@@ -103,8 +82,13 @@
       font-size: 11px;
       color: #9ca3af;
       letter-spacing: 0.16em;
-      text-transform: uppercase;
       margin-top: 2px;
+    }
+
+    .logo-area,
+    .logo-main,
+    .logo-sub {
+      white-space: nowrap;
     }
 
     .nav-menu {
@@ -112,266 +96,77 @@
       align-items: center;
       gap: 26px;
       font-size: 14px;
+      flex-wrap: nowrap;
     }
 
     .nav-menu a {
-      position: relative;
-      color: #d1d5db;
       padding-bottom: 4px;
-      transition: color 0.18s ease-out;
-      white-space: nowrap;
-    }
-
-    .nav-menu a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(to right, #38bdf8, #818cf8);
-      border-radius: 999px;
-      transition: width 0.18s ease-out;
+      color: #d1d5db;
     }
 
     .nav-menu a:hover {
-      color: #f9fafb;
-    }
-
-    .nav-menu a:hover::after {
-      width: 100%;
-    }
-
-    .nav-menu a.nav-group {
-      padding: 6px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(129, 140, 248, 0.6);
-      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 55%);
-      font-size: 13px;
-    }
-
-    .nav-menu a.nav-group::after {
-      display: none;
-    }
-
-    .nav-menu a.nav-group:hover {
-      background: radial-gradient(circle at top left, rgba(129, 140, 248, 0.3), transparent 55%);
+      color: #ffffff;
     }
 
     /* 히어로 */
-    .hero {
-      padding: 72px 0 64px;
+    .intro-hero {
+      padding: 72px 0 40px;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr);
-      gap: 40px;
-    }
-
-    .badge-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.2), rgba(15, 23, 42, 0.9));
-      font-size: 11px;
-      color: #e5e7eb;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .badge-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.22);
-    }
-
-    .hero-title {
-      margin-top: 20px;
-      font-size: 30px;
-      font-weight: 800;
-      line-height: 1.3;
-      letter-spacing: -0.03em;
-    }
-
-    .hero-sub {
-      margin-top: 18px;
-      font-size: 15px;
-      color: #cbd5f5;
-    }
-
-    .hero-sub strong {
-      color: #f9fafb;
-      font-weight: 700;
-    }
-
-    .hero-pill-slider {
-      margin-top: 24px;
-      display: inline-flex;
-      align-items: center;
-      padding: 6px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      background: rgba(15, 23, 42, 0.85);
-      font-size: 11px;
-      color: #e5e7eb;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      overflow: hidden;
-    }
-
-    .hero-pill-text {
-      transition: opacity 0.2s ease-out, transform 0.2s ease-out;
-    }
-
-    /* 섹션 공통 */
-    section {
-      padding: 40px 0;
-      border-top: 1px solid rgba(51, 65, 85, 0.8);
-      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.95), #020617 60%);
-    }
-
-    .section-header {
-      margin-bottom: 16px;
-    }
-
-    .section-kicker {
-      font-size: 11px;
+    .intro-kicker {
+      font-size: 12px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: #9ca3af;
-      margin-bottom: 4px;
     }
 
-    .section-title {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+    .intro-title {
+      margin-top: 12px;
+      font-size: 28px;
+      font-weight: 800;
     }
 
-    .section-desc {
-      margin-top: 10px;
-      font-size: 14px;
+    .intro-sub {
+      margin-top: 14px;
+      font-size: 15px;
       color: #cbd5f5;
+      line-height: 1.7;
     }
 
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
-      gap: 28px;
-      margin-top: 18px;
+    /* 본문 */
+    .intro-section {
+      padding: 20px 0 60px;
     }
 
-    .card {
-      border-radius: 18px;
-      border: 1px solid rgba(75, 85, 99, 0.8);
-      background: radial-gradient(circle at top left, rgba(30, 64, 175, 0.45), rgba(15, 23, 42, 0.98));
-      padding: 18px 18px 16px;
-      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.7);
+    .intro-block {
+      margin-bottom: 32px;
     }
 
-    .card h3 {
+    .intro-block-title {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #e2e8f0;
+    }
+
+    .intro-block-desc {
       font-size: 14px;
-      margin-bottom: 6px;
+      color: #cbd5e1;
+      line-height: 1.7;
     }
 
-    .card p {
-      font-size: 13px;
-      color: #d1d5db;
-    }
-
-    .list-dot {
-      margin-top: 10px;
-      padding-left: 16px;
-    }
-
-    .list-dot li {
-      font-size: 13px;
-      color: #d1d5db;
-      margin-bottom: 4px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 18px;
-    }
-
-    .mini-card {
-      border-radius: 16px;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      background: radial-gradient(circle at top left, rgba(30, 64, 175, 0.5), rgba(15, 23, 42, 0.98));
-      padding: 14px 14px 13px;
-      font-size: 13px;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .mini-kicker {
-      font-size: 11px;
-      color: #9ca3af;
-    }
-
-    .mini-title {
-      font-weight: 600;
-    }
-
-    .mini-meta {
-      font-size: 11px;
-      color: #9ca3af;
-      margin-top: 2px;
-    }
-
-    /* 푸터 */
     footer {
-      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      border-top: 1px solid rgba(31,41,55,0.9);
       padding: 18px 0 22px;
       font-size: 11px;
+      text-align: center;
       color: #9ca3af;
       background: #020617;
     }
 
-    .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 8px;
-      align-items: center;
-    }
-
-    /* 반응형 */
-    @media (max-width: 900px) {
-      .nav-menu {
-        gap: 16px;
-        font-size: 13px;
-      }
-
-      .hero {
-        padding-top: 56px;
-      }
-
-      .hero-title {
-        font-size: 24px;
-      }
-
-      .two-col,
-      .grid-3 {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    @media (max-width: 640px) {
-      header {
-        position: sticky;
-      }
+    /* 모바일 최적화 */
+    @media (max-width: 768px) {
+      .container { padding: 0 16px; }
 
       .nav {
         height: auto;
@@ -381,331 +176,83 @@
         gap: 8px;
       }
 
+      .logo-main { font-size: 18px; }
+      .logo-sub { font-size: 9px; }
+
       .nav-menu {
+        width: 100%;
         flex-wrap: wrap;
+        row-gap: 8px;
+        column-gap: 18px;
+        font-size: 13px;
       }
 
-      .hero {
-        padding-top: 40px;
-      }
-
-      .hero-title {
-        font-size: 22px;
-      }
-
-      .grid-3 {
-        grid-template-columns: minmax(0, 1fr);
-      }
+      .intro-title { font-size: 24px; }
+      .intro-sub { font-size: 14px; }
     }
   </style>
 </head>
 <body>
-  <!-- 헤더 -->
   <header>
-  <div class="container nav">
-    <a href="/" class="logo-area">
-      <span class="logo-main">H VIRAL LAB</span>
-      <span class="logo-sub">R&D · RESEARCH &amp; INSIGHT</span>
-    </a>
-    <nav class="nav-menu">
-      <a href="/introduction/">소개</a>
-      <a href="/insight/">인사이트</a>
-      <a href="/case/">연구사례</a>
-      <a href="/datalab/">데이터랩</a>
-      <a href="/project/">프로젝트</a>
-    </nav>
-  </div>
-</header>
+    <div class="container nav">
+      <a href="/" class="logo-area">
+        <span class="logo-main">H VIRAL LAB</span>
+        <span class="logo-sub">R&D · RESEARCH &amp; INSIGHT</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="/introduction/">소개</a>
+        <a href="/insight/">인사이트</a>
+        <a href="/case/">연구사례</a>
+        <a href="/datalab/">데이터랩</a>
+        <a href="/project/">프로젝트</a>
+      </nav>
+    </div>
+  </header>
 
-  <main id="top">
-    <!-- 히어로 -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="badge-pill">
-            <span class="badge-dot"></span>
-            <span>Digital Acquisition System R&amp;D</span>
-          </div>
-
-          <h1 class="hero-title">
-            디지털 유입 구조를<br />설계하는 R&amp;D 센터, H VIRAL LAB.
-          </h1>
-
-          <p class="hero-sub">
-            H VIRAL LAB은 광고 집행 이전 단계에서<br />
-            <strong>브랜드의 온라인 유입 흐름과 전환 구조</strong>를 먼저 설계합니다.<br />
-            “얼마를 집행할 것인가”가 아니라<br />
-            <strong>“어떤 구조 위에 집행할 것인가”</strong>를 연구합니다.
-          </p>
-
-          <div class="hero-pill-slider">
-            <span id="pillText" class="hero-pill-text">
-              STRUCTURE-FIRST DIGITAL ACQUISITION R&amp;D CENTER
-            </span>
-          </div>
-        </div>
+  <main>
+    <section class="intro-hero">
+      <div class="container">
+        <div class="intro-kicker">ABOUT H VIRAL LAB</div>
+        <h1 class="intro-title">디지털 유입 구조를 연구하는 R&D 조직</h1>
+        <p class="intro-sub">
+          H VIRAL LAB은 브랜드가 온라인에서 고객을 만나는 전 과정을<br>
+          데이터 관점에서 분석하고, 산업별 환경에 맞는 디지털 유입 시스템을<br>
+          연구·개발하는 전문 R&D 조직입니다.
+        </p>
       </div>
     </section>
 
-    <!-- LAB 개요 -->
-    <section id="overview">
+    <section class="intro-section">
       <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">OVERVIEW</div>
-          <div class="section-title">H VIRAL LAB 이란?</div>
-          <p class="section-desc">
-            H VIRAL LAB은 디지털 유입 구조를 전담으로 연구하는 R&amp;D 센터입니다.<br />
-            소상공인, 중소기업, 플랫폼, 프랜차이즈까지<br />
-            각 산업의 특성을 반영한 <strong>온라인 유입·전환 시스템</strong>을 설계합니다.
+
+        <div class="intro-block">
+          <h2 class="intro-block-title">01. 디지털 유입 구조 분석</h2>
+          <p class="intro-block-desc">
+            검색어 패턴, 탐색 행동, 체류 흐름, 전환 직전의 신호까지 고객 여정을 데이터 기반으로 분석합니다.
           </p>
         </div>
 
-        <div class="two-col">
-          <div class="card">
-            <h3>광고 이전, 구조부터 설계합니다.</h3>
-            <p>
-              많은 마케팅이 “예산·채널·소재” 논의에서 시작되지만,<br />
-              H VIRAL LAB은 그보다 먼저 <strong>유입 구조와 데이터 흐름</strong>을 설계합니다.<br /><br />
-              검색 → 탐색 → 비교 → 신뢰 → 문의/구매로 이어지는 디지털 풀퍼널을<br />
-              브랜드별로 모델링하고, 그 위에 실행 전략을 올립니다.
-            </p>
-          </div>
-          <div>
-            <ul class="list-dot">
-              <li>브랜드별 디지털 유입·전환 구조 진단</li>
-              <li>검색/콘텐츠/랜딩/문의까지 이어지는 풀퍼널 모델링</li>
-              <li>데이터 기반 의사결정을 위한 구조 설계</li>
-              <li>장기적으로 축적·확장 가능한 유입 시스템 구축</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- R&D 철학 -->
-    <section id="philosophy">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">R&amp;D PHILOSOPHY</div>
-          <div class="section-title">H VIRAL LAB의 연구 철학</div>
-          <p class="section-desc">
-            H VIRAL LAB은 “단기 광고 성과”가 아니라<br />
-            <strong>브랜드가 스스로 유입을 만들어내는 구조</strong>에 집중합니다.
+        <div class="intro-block">
+          <h2 class="intro-block-title">02. 산업별 풀퍼널 모델링</h2>
+          <p class="intro-block-desc">
+            업종 특성에 따라 달라지는 유입 구조를 모델링하고, 산업별 기준 풀퍼널을 정의합니다.
           </p>
         </div>
 
-        <div class="grid-3">
-          <article class="mini-card">
-            <div class="mini-kicker">01 · STRUCTURE FIRST</div>
-            <div class="mini-title">구조 우선 원칙</div>
-            <div class="mini-meta">
-              예산과 채널보다 먼저, 유입 구조와 데이터 흐름을 설계합니다.<br />
-              어떤 고객이 어떤 경로로 들어와 어떤 지점에서 이탈하는지를 먼저 봅니다.
-            </div>
-          </article>
-
-          <article class="mini-card">
-            <div class="mini-kicker">02 · DATA ORIENTED</div>
-            <div class="mini-title">데이터 기준 운영</div>
-            <div class="mini-meta">
-              감이 아닌 데이터로 풀퍼널을 해석합니다.<br />
-              검색어, 체류시간, 클릭 패턴, 문의 전환 데이터를 한 흐름으로 묶어 분석합니다.
-            </div>
-          </article>
-
-          <article class="mini-card">
-            <div class="mini-kicker">03 · INDUSTRY-SPECIFIC</div>
-            <div class="mini-title">업종 특화 인사이트</div>
-            <div class="mini-meta">
-              업종별 고객 행동 패턴과 규제·환경을 고려합니다.<br />
-              같은 예산이라도 업종마다 전혀 다른 유입 전략이 설계됩니다.
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 연구 영역 -->
-    <section id="scope">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">SCOPE</div>
-          <div class="section-title">연구·개발 영역</div>
-          <p class="section-desc">
-            H VIRAL LAB은 디지털 유입을 하나의 “시스템”으로 바라보고,<br />
-            구조 설계부터 데이터 수집, 자동화까지 전 과정을 연구합니다.
+        <div class="intro-block">
+          <h2 class="intro-block-title">03. 디지털 시스템 기반 R&D</h2>
+          <p class="intro-block-desc">
+            유입–탐색–신뢰–전환의 흐름을 매핑하여 자동화·구조화 가능한 시스템으로 발전시키는 연구를 수행합니다.
           </p>
         </div>
 
-        <div class="two-col">
-          <div class="card">
-            <h3>1) 유입 구조 모델링</h3>
-            <p>
-              검색, 콘텐츠, 블로그, 웹사이트, 예약/문의까지 이어지는<br />
-              전체 흐름을 하나의 모델로 그립니다.<br /><br />
-              어떤 지점에서 고객이 이탈하는지, 어떤 신호에서 전환이 발생하는지<br />
-              데이터로 파악할 수 있는 구조를 만드는 것이 1차 목표입니다.
-            </p>
-          </div>
-          <div class="card">
-            <h3>2) 운영 OS &amp; 자동화</h3>
-            <p>
-              캠페인, 콘텐츠 제작, 상담, 예약, 후기 관리 등 반복되는 운영 업무를<br />
-              하나의 OS처럼 정리합니다.<br /><br />
-              사람이 해야 하는 의사결정과 자동화할 수 있는 영역을 분리해<br />
-              <strong>지속 가능한 디지털 운영 시스템</strong>으로 전환합니다.
-            </p>
-          </div>
-        </div>
-
-        <div class="two-col" style="margin-top:22px;">
-          <div class="card">
-            <h3>3) 업종별 디지털 인프라 기획</h3>
-            <p>
-              소상공인, 의료, 교육, B2B 서비스, 플랫폼 등<br />
-              각 업종별로 필요한 디지털 인프라의 형태는 다릅니다.<br /><br />
-              H VIRAL LAB은 업종별 특성을 반영해<br />
-              <strong>“이 업종이라면 반드시 갖추어야 할 디지털 기반”</strong>을 기획합니다.
-            </p>
-          </div>
-          <div class="card">
-            <h3>4) 리포트 &amp; 인사이트 아카이브</h3>
-            <p>
-              연구 과정에서 도출된 인사이트와 구조 설계 결과는<br />
-              LAB 전용 리포트와 케이스 스터디로 정리됩니다.<br /><br />
-              이는 H VIRAL Group의 실행 조직과 공유되어<br />
-              실제 마케팅/운영 전략에 반영됩니다.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 운영 방식 -->
-    <section id="operation">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">OPERATING MODEL</div>
-          <div class="section-title">운영 방식 및 역할 분리</div>
-          <p class="section-desc">
-            H VIRAL LAB은 실행 조직이 아닌, <strong>연구·설계 전담 조직</strong>입니다.<br />
-            실제 상담·계약·운영은 H VIRAL Group(본사)에서 담당합니다.
-          </p>
-        </div>
-
-        <div class="two-col">
-          <div class="card">
-            <h3>LAB의 역할</h3>
-            <ul class="list-dot">
-              <li>브랜드별 디지털 유입·전환 구조 진단</li>
-              <li>업종·시장·채널 특성을 반영한 구조 설계</li>
-              <li>데이터 수집·해석 프레임 구성</li>
-              <li>운영 OS 및 자동화 로직 설계</li>
-              <li>인사이트 리포트 및 케이스 아카이브 작성</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>H VIRAL Group의 역할</h3>
-            <ul class="list-dot">
-              <li>실제 마케팅 실행 및 운영 대행</li>
-              <li>고객 상담, 계약, 커뮤니케이션</li>
-              <li>웹/앱/콘텐츠 제작 및 운영</li>
-              <li>LAB이 설계한 구조를 기반으로 한 퍼포먼스 운영</li>
-              <li>성과 데이터 피드백 및 LAB과의 상시 협업</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card" style="margin-top:22px;">
-          <h3>전시형 웹사이트 운영 원칙</h3>
-          <p>
-            H VIRAL LAB 웹사이트는 <strong>상담 및 견적 문의를 직접 받지 않습니다.</strong><br />
-            이 공간은 디지털 유입 구조에 대한 연구 방향과 인사이트를 전시하는<br />
-            <strong>전문 아카이브</strong>로만 운영되며,<br />
-            실제 프로젝트 문의는 H VIRAL Group(본사) 채널을 통해 진행됩니다.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 그룹 안내 섹션 -->
-    <section id="group-link">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">H VIRAL GROUP</div>
-          <div class="section-title">본사 및 실행 조직 안내</div>
-          <p class="section-desc">
-            디지털 유입 구조 설계 이후의 <strong>실제 실행·운영·제작</strong>은<br />
-            H VIRAL Group에서 담당합니다.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>H VIRAL Group로 이동하기</h3>
-          <p>
-            홈페이지 제작, 앱·플랫폼 구축, 블로그/콘텐츠 운영, 디지털 브랜딩 등<br />
-            구체적인 실행이 필요하다면 H VIRAL Group 페이지에서 확인하실 수 있습니다.
-          </p>
-          <div class="btn-row" style="margin-top:14px;">
-            <a class="ghost-btn" href="https://hviral.co.kr" target="_blank">
-              <span>↗</span> H VIRAL GROUP 바로가기
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <div>© H VIRAL LAB. All rights reserved.</div>
-      <div>본 사이트는 디지털 유입 구조 R&amp;D 아카이브용으로 운영됩니다.</div>
-    </div>
+    © H VIRAL LAB. All rights reserved.
+    본 사이트는 디지털 유입 구조 연구소 소개 페이지입니다.
   </footer>
-
-  <!-- 네비게이션 부드러운 스크롤 -->
-  <script>
-    const HEADER_OFFSET = 72;
-
-    document.querySelectorAll('nav.nav-menu a[href^="#"]').forEach((link) => {
-      link.addEventListener("click", (e) => {
-        const href = link.getAttribute("href");
-        const id = href.substring(1);
-        const target = document.getElementById(id);
-        if (!target) return;
-
-        e.preventDefault();
-
-        const rect = target.getBoundingClientRect();
-        const scrollTop = window.pageYOffset + rect.top - HEADER_OFFSET;
-
-        window.scrollTo({
-          top: scrollTop,
-          behavior: "smooth",
-        });
-      });
-    });
-  </script>
-
-  <!-- 히어로 텍스트 슬라이더 -->
-  <script>
-    const pillText = document.getElementById("pillText");
-    const slides = [
-      "STRUCTURE-FIRST DIGITAL ACQUISITION R&D CENTER",
-      "DATA-DRIVEN CUSTOMER JOURNEY & FUNNEL DESIGN"
-    ];
-    let idx = 0;
-
-    setInterval(() => {
-      idx = (idx + 1) % slides.length;
-      pillText.style.opacity = 0;
-      pillText.style.transform = "translateY(-2px)";
-      setTimeout(() => {
-        pillText.textContent = slides[idx];
-        pillText.style.opacity = 1;
-        pillText.style.transform = "translateY(0)";
-      }, 160);
-    }, 2600);
-  </script>
 </body>
 </html>

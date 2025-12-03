@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- 메타 -->
-  <meta name="description" content="H VIRAL LAB 프로젝트. 에이치바이럴 마케팅 에이전시는 산업별 디지털 유입 시스템을 정교하게 설계하고, 고도화된 분석으로 구조를 연구하는 전문 R&D 조직입니다.">
-  <meta name="keywords" content="에이치바이럴 마케팅, H VIRAL LAB, 디지털 R&D, 프로젝트 분석, 시스템 설계">
+  <meta name="description" content="H VIRAL LAB 프로젝트. 에이치바이럴 마케팅 에이전시는 산업별 디지털 유입 시스템을 설계하고, 에이치바이럴 광고 데이터를 기반으로 구조를 정교하게 연구하는 R&D 조직입니다.">
+  <meta name="keywords" content="에이치바이럴, 에이치바이럴 마케팅, 에이치바이럴 광고, H VIRAL LAB, 디지털 R&D, 프로젝트 분석, 시스템 설계">
 
   <!-- OG -->
   <meta property="og:title" content="H VIRAL LAB 프로젝트 | 디지털 시스템 R&D">
-  <meta property="og:description" content="에이치바이럴 마케팅 R&D 조직이 수행한 디지털 시스템 설계 프로젝트를 공개합니다.">
+  <meta property="og:description" content="에이치바이럴 마케팅 R&D 조직이 수행한 디지털 시스템 설계 프로젝트를 정리한 페이지입니다.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hvirallab.co.kr/project/">
   <meta property="og:image" content="https://hvirallab.co.kr/og-image-wide.png">
@@ -19,7 +19,7 @@
   <!-- 트위터 -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="H VIRAL LAB 프로젝트 | 디지털 시스템 설계 R&D">
-  <meta name="twitter:description" content="에이치바이럴 마케팅 R&D 조직이 수행한 디지털 시스템 설계 프로젝트 상세.">
+  <meta name="twitter:description" content="에이치바이럴 마케팅 R&D 조직이 설계한 디지털 유입·전환 시스템 프로젝트를 소개합니다.">
   <meta name="twitter:image" content="https://hvirallab.co.kr/og-image-wide.png">
 
   <!-- 파비콘 -->
@@ -39,7 +39,7 @@
     ul { list-style: none; }
     .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-    /* 헤더(완전 동일) */
+    /* 헤더(메인 홈과 동일) */
     header {
       position: sticky; top: 0; z-index: 50;
       backdrop-filter: blur(14px);
@@ -71,15 +71,33 @@
     /* 프로젝트 카드 */
     .project-section { padding: 0 0 60px; }
     .project-grid { display: flex; flex-direction: column; gap: 18px; }
+
+    .project-card-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
     .project-card {
       border-radius: 18px;
       padding: 22px 22px 20px;
       background: radial-gradient(circle at top left, rgba(59,130,246,0.45), rgba(15,23,42,0.95));
       border: 1px solid rgba(148,163,184,0.5);
+      transition: border-color 0.18s ease, transform 0.18s ease;
     }
+    .project-card:hover {
+      border-color: rgba(129,140,248,0.9);
+      transform: translateY(-2px);
+    }
+
     .project-label { font-size: 11px; letter-spacing: 0.14em; color: #bfdbfe; text-transform: uppercase; }
     .project-title { margin-top: 8px; font-size: 17px; font-weight: 700; }
     .project-desc { margin-top: 8px; font-size: 13px; color: #e5e7eb; opacity: 0.9; }
+    .project-more {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #c7d2fe;
+    }
 
     /* 푸터 */
     footer {
@@ -132,10 +150,10 @@
       <div class="container">
         <div class="page-kicker">PROJECT R&D</div>
         <h1 class="page-title">디지털 시스템 설계 프로젝트</h1>
-
         <p class="page-sub">
           에이치바이럴 마케팅 R&amp;D 조직은 산업별 환경을 기반으로<br>
-          디지털 유입·전환 구조를 정교하게 분석하고 시스템을 설계합니다.
+          디지털 유입·전환 구조를 정교하게 분석하고 시스템을 설계합니다.<br>
+          각 프로젝트는 에이치바이럴 광고 운영 데이터와 실제 고객 여정을 함께 고려해 설계되었습니다.
         </p>
       </div>
     </section>
@@ -144,32 +162,47 @@
       <div class="container">
         <div class="project-grid">
 
-          <article class="project-card">
-            <div class="project-label">PROJECT 01</div>
-            <h2 class="project-title">Localized Service Funnel Engineering</h2>
-            <p class="project-desc">
-              지역 기반 서비스 환경에서 발생하는 유입 흐름을 재구성하고,
-              실제 이용자의 전환 지점을 중심으로 퍼널 시스템을 정교하게 설계한 프로젝트입니다.
-            </p>
-          </article>
+          <!-- PROJECT 01 : Local Funnel -->
+          <a href="/project/local-funnel/" class="project-card-link">
+            <article class="project-card">
+              <div class="project-label">PROJECT 01</div>
+              <h2 class="project-title">Localized Service Funnel Engineering</h2>
+              <p class="project-desc">
+                지역 기반 서비스 업종에서 발생하는 유입·예약·재방문 흐름을 분석하고,<br>
+                에이치바이럴 마케팅 팀이 수집한 로컬 데이터와 에이치바이럴 광고 성과 지표를 토대로<br>
+                Local Funnel 구조를 재설계한 프로젝트입니다.
+              </p>
+              <div class="project-more">자세히 보기 &rsaquo;</div>
+            </article>
+          </a>
 
-          <article class="project-card">
-            <div class="project-label">PROJECT 02</div>
-            <h2 class="project-title">Early-Stage Brand Structure Modeling</h2>
-            <p class="project-desc">
-              초기 단계 브랜드의 데이터 신호를 기반으로 구조화된 
-              유입 경로를 설계하고 안정적인 전환 체계를 구축한 R&D 프로젝트입니다.
-            </p>
-          </article>
+          <!-- PROJECT 02 : Brand Structure -->
+          <a href="/project/brand-structure/" class="project-card-link">
+            <article class="project-card">
+              <div class="project-label">PROJECT 02</div>
+              <h2 class="project-title">Early-Stage Brand Structure Modeling</h2>
+              <p class="project-desc">
+                인지도가 낮은 초기 브랜드를 대상으로, 검색·콘텐츠·에이치바이럴 광고 채널을 분리해<br>
+                Brand Signal 구조를 설계한 프로젝트입니다.  
+                에이치바이럴 마케팅 R&amp;D 조직이 브랜드 인지 형성과 유입 구조를 함께 모델링했습니다.
+              </p>
+              <div class="project-more">자세히 보기 &rsaquo;</div>
+            </article>
+          </a>
 
-          <article class="project-card">
-            <div class="project-label">PROJECT 03</div>
-            <h2 class="project-title">System Rebuilding & Optimization</h2>
-            <p class="project-desc">
-              기존 디지털 구조를 해석하고 필요한 구간을 재정의하여,
-              실제 시장 환경에서 지속 가능한 전환 시스템을 완성한 프로젝트입니다.
-            </p>
-          </article>
+          <!-- PROJECT 03 : System Optimization -->
+          <a href="/project/system-optimization/" class="project-card-link">
+            <article class="project-card">
+              <div class="project-label">PROJECT 03</div>
+              <h2 class="project-title">System Rebuilding & Optimization</h2>
+              <p class="project-desc">
+                기존 디지털 구조와 에이치바이럴 광고 데이터 로그를 함께 해석해,<br>
+                불필요한 경로를 정리하고 전환에 직접 연결되는 여정을 중심으로 시스템을 리빌딩한 프로젝트입니다.  
+                장기적인 효율을 기준으로 최적화 전략을 정리한 케이스입니다.
+              </p>
+              <div class="project-more">자세히 보기 &rsaquo;</div>
+            </article>
+          </a>
 
         </div>
       </div>
@@ -178,7 +211,7 @@
 
   <footer>
     © H VIRAL LAB. All rights reserved.
-    본 사이트는 에이치바이럴 마케팅 R&D 프로젝트 페이지입니다.
+    본 사이트는 에이치바이럴 마케팅 R&amp;D 프로젝트 페이지입니다.
   </footer>
 </body>
 </html>

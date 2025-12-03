@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>CASE STUDY | 디지털 유입·전환 구조 연구사례 – H VIRAL LAB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      background: radial-gradient(circle at top left, #1f3b78 0, #020617 60%, #000 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", system-ui, sans-serif;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(3,7,18,0.8);
+      border-bottom: 1px solid rgba(148,163,184,0.3);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
+
+    .logo-main {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .logo-sub {
+      font-size: 11px;
+      color: #9ca3af;
+      letter-spacing: 0.16em;
+      margin-top: 2px;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+    }
+
+    .nav-menu a:hover { color: #ffffff; }
+
+    /* HERO */
+    .hero {
+      padding: 72px 0 60px;
+    }
+
+    .hero-title {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      color: #cbd5f5;
+    }
+
+    /* SECTION */
+    section {
+      padding: 40px 0;
+      border-top: 1px solid rgba(51,65,85,0.7);
+      background: radial-gradient(circle at top left, rgba(15,23,42,0.95), #020617 60%);
+    }
+
+    .section-title {
+      font-size: 21px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .section-desc {
+      font-size: 14px;
+      color: #cbd5f5;
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .case-card {
+      border-radius: 16px;
+      background: radial-gradient(circle at top left, rgba(30,64,175,0.55), rgba(15,23,42,0.98));
+      border: 1px solid rgba(75,85,99,0.9);
+      padding: 18px 16px;
+      box-shadow: 0 16px 38px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .case-kicker {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      color: #9ca3af;
+    }
+
+    .case-title {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .case-meta {
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    .case-body {
+      font-size: 13px;
+      color: #e5e7eb;
+      margin-top: 4px;
+    }
+
+    /* 2 COLUMN WRAP */
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .card {
+      border-radius: 16px;
+      background: radial-gradient(circle at top left, rgba(15,23,42,0.95), rgba(15,23,42,1));
+      border: 1px solid rgba(75,85,99,0.9);
+      padding: 18px 16px;
+      box-shadow: 0 18px 42px rgba(0,0,0,0.6);
+      font-size: 13px;
+      color: #d1d5db;
+    }
+
+    .card h3 {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .card li {
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .two-col { grid-template-columns: minmax(0,1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: minmax(0,1fr); }
+      .hero-title { font-size: 24px; }
+    }
+
+    footer {
+      border-top: 1px solid rgba(31,41,55,0.9);
+      padding: 20px 0;
+      font-size: 11px;
+      color: #9ca3af;
+      text-align: center;
+      background: #020617;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="/" class="logo-area">
+      <div class="logo-main">H VIRAL LAB</div>
+      <div class="logo-sub">R&D · CASE STUDY</div>
+    </a>
+    <nav class="nav-menu">
+      <a href="/introduction">소개</a>
+      <a href="/insight">인사이트</a>
+      <a href="/case">연구사례</a>
+      <a href="/datalab">데이터랩</a>
+      <a href="/project">프로젝트</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">디지털 유입·전환 구조 연구사례</h1>
+      <p class="hero-desc">
+        실제 프로젝트에 가까운 환경을 가정해<br />
+        업종별 디지털 유입 구조를 설계·검증한 연구사례들입니다.<br />
+        예산·채널이 아니라, <strong>구조와 데이터 관점</strong>에서 정리합니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- CASE LIST -->
+  <section>
+    <div class="container">
+      <div class="section-title">CASE STUDY ARCHIVE</div>
+      <p class="section-desc">
+        각 사례는 “어떤 유입 구조를 설계했고, 어떤 데이터로 검증했는가”에 초점을 맞춥니다.<br />
+        실제 상호명·상세 수치는 노출하지 않고, 구조와 인사이트만 정리합니다.
+      </p>
+
+      <div class="grid">
+        <!-- CASE 01 -->
+        <article class="case-card">
+          <div class="case-kicker">CASE 01 · LOCAL CLINIC</div>
+          <div class="case-title">피부과 온라인 진료 접수 유입 구조</div>
+          <div class="case-meta">의료 · 로컬 서비스 · 예약/상담</div>
+          <div class="case-body">
+            “증상 키워드 → 진료 방법 탐색 → 병원 비교 → 온라인 접수”로 이어지는 구조에서<br />
+            이탈이 가장 많이 발생하는 구간을 데이터로 추적하고<br />
+            접수 페이지 진입 전 단계의 신뢰 요소를 재설계한 케이스입니다.
+          </div>
+        </article>
+
+        <!-- CASE 02 -->
+        <article class="case-card">
+          <div class="case-kicker">CASE 02 · FITNESS STUDIO</div>
+          <div class="case-title">헬스장 체험 문의 풀퍼널 리디자인</div>
+          <div class="case-meta">운동 · 구독형 서비스 · 로컬</div>
+          <div class="case-body">
+            “가격 먼저 보는 고객”과 “시설/코치 정보 먼저 보는 고객”의 행동 패턴을 분리해,<br />
+            랜딩 구조를 2트랙으로 나누고 문의→방문→재등록까지의 전환 흐름을<br />
+            단계별로 모델링한 케이스입니다.
+          </div>
+        </article>
+
+        <!-- CASE 03 -->
+        <article class="case-card">
+          <div class="case-kicker">CASE 03 · B2B SERVICE</div>
+          <div class="case-title">B2B 리드 생성 구조 설계</div>
+          <div class="case-meta">B2B · 컨설팅/솔루션 · 리드제너레이션</div>
+          <div class="case-body">
+            “담당자의 정보 수집 단계”와 “내부 결재를 위한 논리 구조”를 분리해,<br />
+            리드 획득 전에 제공해야 할 자료 구조를 설계하고,<br />
+            인입 후 세일즈까지 이어지는 OS를 정의한 케이스입니다.
+          </div>
+        </article>
+
+        <!-- CASE 04 -->
+        <article class="case-card">
+          <div class="case-kicker">CASE 04 · FRANCHISE</div>
+          <div class="case-title">창업 상담 유입 퍼널 정비</div>
+          <div class="case-meta">프랜차이즈 · 창업 · 리드 유입</div>
+          <div class="case-body">
+            브랜드 검색, 창업 후기, 본사 정보, 수익 구조 자료 등<br />
+            창업자가 실제로 확인하는 경로를 재구성하고,<br />
+            ‘본점 신뢰도’와 ‘지점 수익성’에 대한 정보를 분리 제공한 케이스입니다.
+          </div>
+        </article>
+
+        <!-- CASE 05 -->
+        <article class="case-card">
+          <div class="case-kicker">CASE 05 · EDUCATION</div>
+          <div class="case-title">온라인 강의/과정 상담 구조</div>
+          <div class="case-meta">교육 · 온라인 클래스 · 리드/수강</div>
+          <div class="case-body">
+            커리큘럼, 후기, 강사 정보, 수강 후 사용처 등<br />
+            교육 상품 선택에 영향을 미치는 정보를<br />
+            검색–랜딩–상담까지 하나의 시나리오로 정리한 케이스입니다.
+          </div>
+        </article>
+
+        <!-- CASE 06 -->
+        <article class="case-card">
+          <div class="case-kicker">CASE 06 · SMB DIGITAL</div>
+          <div class="case-title">소상공인 디지털 전환 유입 구조</div>
+          <div class="case-meta">소상공인 · 홈페이지/예약/마케팅 통합</div>
+          <div class="case-body">
+            ‘처음 온라인을 도입하는 사업자’ 관점에서,<br />
+            홈페이지·예약·블로그·문의 채널을 한 번에 설계하고<br />
+            디지털 전환 초기 로드맵을 구조화한 케이스입니다.
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD & PRINCIPLES -->
+  <section>
+    <div class="container">
+      <div class="section-title">연구 방법 및 정리 원칙</div>
+      <p class="section-desc">
+        H VIRAL LAB의 연구사례는 실제 운영 데이터, 시뮬레이션, 구조 설계를 결합해 정리합니다.<br />
+        개별 케이스의 수치보다, <strong>반복적으로 적용 가능한 구조</strong>에 초점을 둡니다.
+      </p>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>연구·정리 방법</h3>
+          <ul>
+            <li>· 업종별 디지털 유입 흐름 맵 작성</li>
+            <li>· 검색→탐색→비교→신뢰→전환 단계별 이탈 구간 분석</li>
+            <li>· 랜딩·콘텐츠·문의 폼 등의 구조 재설계</li>
+            <li>· 구조 변경 전/후 흐름 비교 및 정성·정량 인사이트 도출</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>공개 원칙</h3>
+          <ul>
+            <li>· 실제 상호명, 세부 매출 수치 등은 비공개</li>
+            <li>· 구조, 흐름, 의사결정 기준 중심으로만 정리</li>
+            <li>· 특정 매체·플랫폼 광고를 직접적으로 추천하지 않음</li>
+            <li>· LAB의 내부 연구 결과로, 개별 투자/광고 집행을 유도하지 않음</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © H VIRAL LAB. All rights reserved. 디지털 유입·전환 구조 R&amp;D 아카이브.
+</footer>
+
+</body>
+</html>

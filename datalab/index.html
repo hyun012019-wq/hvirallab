@@ -9,53 +9,26 @@
   <meta name="description" content="H VIRAL LAB 데이터랩. 유입 흐름 데이터 구조화, 자동화 시스템 연구, 운영 프로세스 모델링 등 기술 기반 R&D 내용을 다루는 전문 영역입니다.">
   <meta name="keywords" content="에이치바이럴 데이터랩, H VIRAL LAB, 데이터 구조 설계, 자동화 연구, 디지털 R&D">
 
-  <!-- 기본 OG 태그 -->
-<meta property="og:title" content="H VIRAL LAB | 디지털 유입 시스템 R&D 센터">
-<meta property="og:description" content="브랜드의 온라인 유입 흐름을 기반으로 디지털 유입 시스템을 연구·개발하는 전문 R&D 센터입니다.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hvirallab.co.kr">
-
-<!-- 정사각형 OG 이미지 -->
-<meta property="og:image" content="https://hvirallab.co.kr/og-image.png">
-
-<!-- 가로형 OG 이미지 (SNS 확대 미리보기용) -->
-<meta property="og:image" content="https://hvirallab.co.kr/og-image-wide.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-
-<!-- 트위터 카드 -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="H VIRAL LAB | 디지털 유입 시스템 R&D 센터">
-<meta name="twitter:description" content="브랜드의 온라인 유입 흐름을 기반으로 디지털 유입 시스템을 연구·개발하는 전문 R&D 센터입니다.">
-<meta name="twitter:image" content="https://hvirallab.co.kr/og-image-wide.png">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="H VIRAL LAB 데이터랩 | 에이치바이럴 기술 기반 R&D 연구">
-  <meta property="og:description" content="데이터 구조 설계와 자동화 시스템 구축을 중심으로 진행되는 H VIRAL LAB의 기술 연구 아카이브.">
+  <!-- OG 태그 -->
+  <meta property="og:title" content="H VIRAL LAB 데이터랩 | 구조 설계·자동화 R&D">
+  <meta property="og:description" content="유입 흐름 데이터 구조화, 자동화 시스템, 운영 프로세스 모델링을 중심으로 한 H VIRAL LAB 데이터랩 R&D 아카이브입니다.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hvirallab.co.kr/datalab/">
-  <meta property="og:image" content="https://hvirallab.co.kr/og-image.png">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="H VIRAL LAB 데이터랩 | 에이치바이럴 기술 R&D 아카이브">
-  <meta name="twitter:description" content="데이터 기반 구조 연구, 자동화 시스템 모델링, 운영 OS 설계를 다루는 기술 중심 R&D 영역.">
-  <meta name="twitter:image" content="https://hvirallab.co.kr/og-image.png">
-
-  <meta property="og:title" content="H VIRAL LAB | 디지털 유입 시스템 R&D 센터">
-<meta property="og:description" content="브랜드의 온라인 유입 구조를 연구·개발하는 H VIRAL LAB 공식 페이지입니다.">
-<meta property="og:image" content="https://hvirallab.co.kr/og-image.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hvirallab.co.kr">
+  <meta property="og:image" content="https://hvirallab.co.kr/og-image-wide.png">
 
   <!-- 파비콘 -->
   <link rel="icon" type="image/svg+xml" href="/favicon-16x16.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-</head>
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { width: 100%; max-width: 100%; overflow-x: hidden; scroll-behavior: smooth; }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
@@ -68,22 +41,34 @@
 
     a { color: inherit; text-decoration: none; }
     ul { list-style: none; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 헤더 (index / insight와 동일 구조) */
     header {
       position: sticky;
       top: 0;
       z-index: 50;
       backdrop-filter: blur(14px);
-      background: rgba(3,7,18,0.8);
+      background: linear-gradient(to bottom, rgba(3,7,18,0.9), rgba(3,7,18,0.6));
       border-bottom: 1px solid rgba(148,163,184,0.3);
     }
 
     .nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       height: 64px;
+    }
+
+    .logo-area {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .logo-main {
@@ -99,344 +84,237 @@
       margin-top: 2px;
     }
 
+    .logo-area,
+    .logo-main,
+    .logo-sub {
+      white-space: nowrap;
+    }
+
     .nav-menu {
       display: flex;
-      gap: 24px;
+      align-items: center;
+      gap: 26px;
       font-size: 14px;
+      flex-wrap: nowrap;
     }
 
-    .nav-menu a:hover { color: #ffffff; }
-
-    /* HERO */
-    .hero {
-      padding: 72px 0 60px;
-    }
-
-    .hero-title {
-      font-size: 30px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 14px;
-    }
-
-    .hero-desc {
-      font-size: 15px;
-      color: #cbd5f5;
-    }
-
-    /* SECTION 공통 */
-    section {
-      padding: 40px 0;
-      border-top: 1px solid rgba(51,65,85,0.7);
-      background: radial-gradient(circle at top left, rgba(15,23,42,0.95), #020617 60%);
-    }
-
-    .section-title {
-      font-size: 21px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .section-desc {
-      font-size: 14px;
-      color: #cbd5f5;
-      margin-bottom: 18px;
-      line-height: 1.7;
-    }
-
-    /* GRID들 */
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 24px;
-    }
-
-    .card {
-      border-radius: 16px;
-      background: radial-gradient(circle at top left, rgba(30,64,175,0.55), rgba(15,23,42,0.98));
-      border: 1px solid rgba(75,85,99,0.9);
-      padding: 18px 16px;
-      box-shadow: 0 18px 42px rgba(0,0,0,0.55);
-      font-size: 13px;
-    }
-
-    .card h3 {
-      font-size: 15px;
-      margin-bottom: 8px;
-    }
-
-    .card p {
-      color: #e5e7eb;
-      line-height: 1.7;
-    }
-
-    .card ul {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 6px;
-    }
-
-    .card li {
-      margin-bottom: 4px;
+    .nav-menu a {
+      position: relative;
+      padding-bottom: 4px;
       color: #d1d5db;
     }
 
-    .badge {
-      font-size: 11px;
-      letter-spacing: 0.16em;
+    .nav-menu a:hover {
+      color: #ffffff;
+    }
+
+    /* 페이지 히어로 */
+    .page-hero {
+      padding: 72px 0 40px;
+    }
+
+    .page-kicker {
+      font-size: 12px;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: #9ca3af;
-      margin-bottom: 4px;
     }
 
-    .meta {
-      font-size: 12px;
-      color: #9ca3af;
-      margin-top: 4px;
+    .page-title {
+      margin-top: 12px;
+      font-size: 26px;
+      font-weight: 800;
     }
 
-    /* 반응형 */
-    @media (max-width: 900px) {
-      .grid-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      .grid-2 { grid-template-columns: minmax(0,1fr); }
+    .page-sub {
+      margin-top: 14px;
+      font-size: 14px;
+      color: #cbd5f5;
     }
 
-    @media (max-width: 640px) {
-      .grid-3 { grid-template-columns: minmax(0,1fr); }
-      .hero-title { font-size: 24px; }
+    /* 데이터랩 카드 리스트 */
+    .datalab-section {
+      padding: 0 0 56px;
+    }
+
+    .datalab-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .datalab-card {
+      border-radius: 18px;
+      padding: 18px 20px 16px;
+      background: radial-gradient(circle at top left,
+        rgba(37, 99, 235, 0.5),
+        rgba(15, 23, 42, 0.95));
+      border: 1px solid rgba(148,163,184,0.5);
+    }
+
+    .datalab-label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: #bfdbfe;
+      text-transform: uppercase;
+    }
+
+    .datalab-title {
+      margin-top: 8px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .datalab-desc {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #e5e7eb;
+      opacity: 0.9;
     }
 
     footer {
       border-top: 1px solid rgba(31,41,55,0.9);
-      padding: 20px 0;
+      padding: 18px 0 22px;
       font-size: 11px;
-      color: #9ca3af;
       text-align: center;
+      color: #9ca3af;
       background: #020617;
+    }
+
+    /* 모바일 */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .nav {
+        height: auto;
+        padding: 10px 0 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .logo-main {
+        font-size: 18px;
+      }
+
+      .logo-sub {
+        font-size: 9px;
+        letter-spacing: 0.14em;
+      }
+
+      .nav-menu {
+        width: 100%;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        column-gap: 18px;
+        font-size: 13px;
+      }
+
+      .nav-menu a {
+        padding-bottom: 2px;
+      }
+
+      .page-hero {
+        padding: 56px 0 32px;
+      }
+
+      .page-title {
+        font-size: 22px;
+      }
+
+      .page-sub {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .nav-menu {
+        column-gap: 14px;
+      }
+
+      .page-title {
+        font-size: 20px;
+      }
+
+      .page-sub {
+        font-size: 12px;
+      }
     }
   </style>
 </head>
-
 <body>
-
-<header>
-  <div class="container nav">
-    <a href="/" class="logo-area">
-      <span class="logo-main">H VIRAL LAB</span>
-      <span class="logo-sub">R&D · RESEARCH &amp; INSIGHT</span>
-    </a>
-    <nav class="nav-menu">
-      <a href="/introduction/">소개</a>
-      <a href="/insight/">인사이트</a>
-      <a href="/case/">연구사례</a>
-      <a href="/datalab/">데이터랩</a>
-      <a href="/project/">프로젝트</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h1 class="hero-title">데이터랩 · Digital Acquisition Data Lab</h1>
-      <p class="hero-desc">
-        H VIRAL LAB 데이터랩은 디지털 유입 구조를<br />
-        <strong>“수집 가능한 데이터 구조”와 “자동화 가능한 로직”</strong>으로 변환하는 영역입니다.<br />
-        각 채널에서 발생하는 신호를 한 흐름으로 정리하고,  
-        운영 OS와 연결 가능한 형태로 설계합니다.
-      </p>
+  <header>
+    <div class="container nav">
+      <a href="/" class="logo-area">
+        <span class="logo-main">H VIRAL LAB</span>
+        <span class="logo-sub">R&D · RESEARCH &amp; INSIGHT</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="/introduction/">소개</a>
+        <a href="/insight/">인사이트</a>
+        <a href="/case/">연구사례</a>
+        <a href="/datalab/">데이터랩</a>
+        <a href="/project/">프로젝트</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- 01. ROLE -->
-  <section>
-    <div class="container">
-      <div class="section-title">데이터랩의 역할</div>
-      <p class="section-desc">
-        데이터랩은 단순 리포트 작성 조직이 아니라,<br />
-        디지털 유입 구조를 **데이터 관점에서 재설계하는 R&amp;D 유닛**입니다.
-      </p>
+  <main>
+    <!-- 상단 설명 영역 -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-kicker">DATA LAB · R&amp;D</div>
+        <h1 class="page-title">데이터 구조 설계·자동화 R&amp;D</h1>
+        <p class="page-sub">
+          H VIRAL LAB 데이터랩은 디지털 유입 데이터를<br>
+          구조화·모델링하고, 자동화 가능한 운영 시스템으로 전환하는<br>
+          기술 기반 R&amp;D 영역입니다.
+        </p>
+      </div>
+    </section>
 
-      <div class="grid-3">
-        <div class="card">
-          <div class="badge">ROLE 01</div>
-          <h3>유입 신호 구조화</h3>
-          <p>
-            검색·콘텐츠·랜딩·문의·예약 등에서 발생하는 로그를<br />
-            단일 퍼널 상의 **“신호 체계”**로 재구성합니다.
-          </p>
-          <div class="meta">
-            채널별 데이터가 아니라,  
-            고객 여정 기준 데이터 흐름으로 재정렬합니다.
-          </div>
-        </div>
+    <!-- 데이터랩 R&D 주제 리스트 -->
+    <section class="datalab-section">
+      <div class="container">
+        <div class="datalab-grid">
+          <article class="datalab-card">
+            <div class="datalab-label">DATALAB 01</div>
+            <h2 class="datalab-title">유입 흐름 데이터 구조화</h2>
+            <p class="datalab-desc">
+              검색어 → 유입 경로 → 체류 패턴 → 문의 전환까지의 흐름을
+              데이터 테이블로 구조화하고, 업종별로 재사용 가능한 기준 모델을 설계합니다.
+            </p>
+          </article>
 
-        <div class="card">
-          <div class="badge">ROLE 02</div>
-          <h3>데이터 수집 설계</h3>
-          <p>
-            어떤 지점을 관측해야 구조를 개선할 수 있는지 정의하고,<br />
-            시스템·이벤트·폼 구조를 설계합니다.
-          </p>
-          <div class="meta">
-            “수집 가능한 데이터”와 “실제로 의미 있는 데이터”를 구분합니다.
-          </div>
-        </div>
+          <article class="datalab-card">
+            <div class="datalab-label">DATALAB 02</div>
+            <h2 class="datalab-title">운영 자동화 시나리오 R&amp;D</h2>
+            <p class="datalab-desc">
+              반복되는 마케팅·운영 업무를 자동화 플로우로 전환하기 위해
+              트리거(Trigger)·조건(Condition)·액션(Action) 단위로 쪼개어 설계합니다.
+            </p>
+          </article>
 
-        <div class="card">
-          <div class="badge">ROLE 03</div>
-          <h3>자동화 로직 설계</h3>
-          <p>
-            반복되는 운영 단계를 데이터 기반 규칙으로 정리하고,<br />
-            자동화 도입이 가능한 지점을 식별합니다.
-          </p>
-          <div class="meta">
-            사람이 판단해야 할 영역과 시스템이 처리할 영역을 분리합니다.
-          </div>
+          <article class="datalab-card">
+            <div class="datalab-label">DATALAB 03</div>
+            <h2 class="datalab-title">리포트 템플릿 &amp; 모니터링 구조</h2>
+            <p class="datalab-desc">
+              경영진, 실무자, 외주 파트너 각각이 필요한 관점으로
+              데이터를 모니터링할 수 있도록 리포트 템플릿과 대시보드 구조를 정의합니다.
+            </p>
+          </article>
+
+          <!-- 필요하면 여기 아래로 카드 계속 추가 -->
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- 02. DATA FLOW -->
-  <section>
-    <div class="container">
-      <div class="section-title">디지털 유입 데이터 흐름</div>
-      <p class="section-desc">
-        데이터랩은 디지털 유입 과정을<br />
-        **검색 → 유입 → 탐색 → 행동 → 전환/이탈**의 데이터 흐름으로 바라봅니다.
-      </p>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3>1) 데이터 흐름 맵</h3>
-          <p>
-            각 브랜드·업종별로 다음과 같은 흐름을 정의합니다.
-          </p>
-          <ul>
-            <li>· 어떤 검색어/채널에서 유입이 시작되는지</li>
-            <li>· 어떤 페이지/콘텐츠를 거쳐 신뢰가 형성되는지</li>
-            <li>· 어떤 행동(클릭/스크롤/체류) 이후 문의로 이어지는지</li>
-            <li>· 이탈이 집중되는 구간은 어디인지</li>
-          </ul>
-          <p style="margin-top:8px;">
-            이 흐름을 기반으로 **측정 포인트와 이벤트 구조**가 설계됩니다.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>2) 데이터 계층 구조</h3>
-          <p>
-            단순 로그가 아니라 다음과 같은 계층으로 구분합니다.
-          </p>
-          <ul>
-            <li>· 원시 로그 (pageview, click, event 등)</li>
-            <li>· 세션/여정 단위 데이터</li>
-            <li>· 퍼널 단계별 전환율/이탈률</li>
-            <li>· 장기적인 유입 채널별 기여도</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 03. AUTOMATION & OS -->
-  <section>
-    <div class="container">
-      <div class="section-title">운영 OS &amp; 자동화 관점</div>
-      <p class="section-desc">
-        데이터랩은 수집된 데이터를<br />
-        **운영 OS와 어떻게 연결할 것인가**에 초점을 맞춥니다.
-      </p>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3>운영 OS와의 연결</h3>
-          <p>
-            디지털 유입 데이터는 다음과 같은 운영 영역과 연결됩니다.
-          </p>
-          <ul>
-            <li>· 마케팅 캠페인 설정 및 조정</li>
-            <li>· 콘텐츠/랜딩 페이지 구조 개편</li>
-            <li>· 상담/CS 스크립트 및 우선순위 조정</li>
-            <li>· 예약/문의 폼 개선 및 자동 응답 구조</li>
-          </ul>
-          <p style="margin-top:8px;">
-            **데이터 → 구조 → 운영**으로 이어지는 선을 만드는 것이<br />
-            데이터랩의 핵심 역할입니다.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>자동화 도입 관점</h3>
-          <p>
-            자동화 영역은 “전부 자동화”가 아니라,  
-            **반복적·규칙 기반 업무**에 집중합니다.
-          </p>
-          <ul>
-            <li>· 특정 조건 충족 시 알림/태스크 생성</li>
-            <li>· 리드 상태에 따른 후속 메시지 시나리오</li>
-            <li>· 주기적인 리포트/대시보드 생성</li>
-            <li>· 비효율 구간 알림 및 구조 개선 제안</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 04. PRINCIPLES -->
-  <section>
-    <div class="container">
-      <div class="section-title">데이터 활용 원칙</div>
-      <p class="section-desc">
-        H VIRAL LAB 데이터랩은 **법·정책·플랫폼 가이드라인을 준수하는 범위 내에서만**<br />
-        데이터를 수집·분석·활용하는 것을 원칙으로 합니다.
-      </p>
-
-      <div class="grid-3">
-        <div class="card">
-          <div class="badge">PRINCIPLE 01</div>
-          <h3>합법·정책 준수</h3>
-          <p>
-            국내 개인정보 보호 관련 법규 및 각 플랫폼 정책을 준수하며,<br />
-            식별 가능한 개인 정보 대신 **행동 패턴과 구조 데이터**에 집중합니다.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="badge">PRINCIPLE 02</div>
-          <h3>최소 수집·목적 명확화</h3>
-          <p>
-            “구조 개선”에 필요한 최소한의 데이터만 수집하며,<br />
-            수집 목적과 활용 방향을 사전에 정의합니다.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="badge">PRINCIPLE 03</div>
-          <h3>투명한 인사이트 정리</h3>
-          <p>
-            특정 매체나 상품의 광고를 직접적으로 유도하지 않고,<br />
-            구조와 인사이트 중심의 정제된 형태로 결과를 정리합니다.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  © H VIRAL LAB. All rights reserved. 디지털 유입 데이터 구조 &amp; 자동화 R&amp;D.
-</footer>
-
+  <footer>
+    © H VIRAL LAB. All rights reserved.
+    본 사이트는 디지털 유입 구조 R&D 연구소 데이터랩 페이지입니다.
+  </footer>
 </body>
 </html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>H VIRAL LAB 데이터랩 | 에이치바이럴 마케팅 데이터 구조 연구</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- 기본 메타 -->
+  <meta name="description" content="H VIRAL LAB 데이터랩 | 에이치바이럴 마케팅 Data Lab. 디지털 흐름 구조, Operational Intelligence, System Architecture를 연구하는 데이터 기반 R&D 영역입니다.">
+  <meta name="keywords" content="에이치바이럴 마케팅, H VIRAL LAB, 데이터랩, 디지털 데이터 구조, Operational Intelligence, System Architecture, Digital Framework R&D">
+
+  <!-- OG 태그 -->
+  <meta property="og:title" content="H VIRAL LAB 데이터랩 | 에이치바이럴 마케팅 데이터 구조 연구">
+  <meta property="og:description" content="브랜드 운영 과정에서 생성되는 디지털 흐름을 정량 구조로 해석하고, Operational Intelligence를 설계하는 H VIRAL LAB 데이터랩 페이지입니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hvirallab.co.kr/datalab/">
+  <meta property="og:image" content="https://hvirallab.co.kr/og-image-wide.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- 트위터 카드 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="H VIRAL LAB 데이터랩 | 에이치바이럴 마케팅 데이터 구조 연구">
+  <meta name="twitter:description" content="에이치바이럴 마케팅의 Data Lab. 디지털 흐름을 기반으로 Operational Intelligence와 System Architecture를 설계하는 R&D 영역입니다.">
+  <meta name="twitter:image" content="https://hvirallab.co.kr/og-image-wide.png">
+
+  <!-- 파비콘 -->
+  <link rel="icon" type="image/svg+xml" href="/favicon-16x16.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+        "Noto Sans KR", system-ui, sans-serif;
+      background: radial-gradient(circle at top left,
+        #1f3b78 0,
+        #020617 55%,
+        #000 100%);
+      color: #e5e7eb;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 헤더 (메인 index와 동일 구조) */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(
+        to bottom,
+        rgba(3, 7, 18, 0.9),
+        rgba(3, 7, 18, 0.6)
+      );
+      border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo-area {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .logo-main {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .logo-sub {
+      font-size: 11px;
+      color: #9ca3af;
+      letter-spacing: 0.16em;
+      margin-top: 2px;
+    }
+
+    /* 로고 줄바꿈 방지 */
+    .logo-area,
+    .logo-main,
+    .logo-sub {
+      white-space: nowrap;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 14px;
+      flex-wrap: nowrap;
+    }
+
+    .nav-menu a {
+      position: relative;
+      padding-bottom: 4px;
+      color: #d1d5db;
+    }
+
+    .nav-menu a:hover {
+      color: #ffffff;
+    }
+
+    .nav-group {
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(129, 140, 248, 0.6);
+      background: radial-gradient(
+        circle at top left,
+        rgba(56, 189, 248, 0.16),
+        transparent 55%
+      );
+      white-space: nowrap;
+    }
+
+    /* 데이터랩 히어로 */
+    .datalab-hero {
+      padding: 80px 0 52px;
+    }
+
+    .datalab-kicker {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #9ca3af;
+    }
+
+    .datalab-title {
+      margin-top: 12px;
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .datalab-sub {
+      margin-top: 16px;
+      font-size: 15px;
+      color: #cbd5f5;
+      line-height: 1.8;
+    }
+
+    /* 본문 섹션 */
+    .datalab-section {
+      padding: 10px 0 64px;
+    }
+
+    .datalab-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    .datalab-block-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #e5e7eb;
+      margin-bottom: 10px;
+    }
+
+    .datalab-block-text {
+      font-size: 14px;
+      color: #cbd5e1;
+      line-height: 1.8;
+    }
+
+    .datalab-list {
+      margin-top: 10px;
+      padding-left: 18px;
+    }
+
+    .datalab-list li {
+      font-size: 13px;
+      color: #d1d5db;
+      margin-bottom: 6px;
+      line-height: 1.7;
+    }
+
+    .datalab-tag {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #a5b4fc;
+      margin-bottom: 6px;
+    }
+
+    .datalab-card {
+      margin-top: 8px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: radial-gradient(circle at top left,
+        rgba(37, 99, 235, 0.45),
+        rgba(15, 23, 42, 0.98));
+      font-size: 13px;
+      color: #e5e7eb;
+      line-height: 1.8;
+    }
+
+    .datalab-mini {
+      margin-top: 22px;
+      font-size: 12px;
+      color: #9ca3af;
+      line-height: 1.7;
+    }
+
+    footer {
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 18px 0 22px;
+      font-size: 11px;
+      text-align: center;
+      color: #9ca3af;
+      background: #020617;
+    }
+
+    /* =========================
+       모바일 대응 (공통 레이아웃)
+       ========================= */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      /* 모바일 헤더: 로고/메뉴 중앙 정렬 (index와 동일) */
+      .nav {
+        height: auto;
+        padding: 10px 0 8px;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .logo-area {
+        align-items: center;
+      }
+
+      .logo-main {
+        font-size: 18px;
+      }
+
+      .logo-sub {
+        font-size: 9px;
+        letter-spacing: 0.14em;
+      }
+
+      .nav-menu {
+        width: 100%;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        column-gap: 18px;
+        font-size: 13px;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .nav-menu a {
+        padding-bottom: 2px;
+      }
+
+      .nav-group {
+        padding: 5px 12px;
+        font-size: 12px;
+      }
+
+      .datalab-hero {
+        padding: 56px 0 36px;
+      }
+
+      .datalab-title {
+        font-size: 23px;
+      }
+
+      .datalab-sub {
+        font-size: 14px;
+      }
+
+      .datalab-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+      }
+    }
+
+    /* 더 작은 화면(아이폰 SE 등)용 세부 조정 */
+    @media (max-width: 420px) {
+      .nav-menu {
+        column-gap: 14px;
+      }
+
+      .datalab-title {
+        font-size: 21px;
+      }
+
+      .datalab-sub {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="/" class="logo-area">
+        <span class="logo-main">H VIRAL LAB</span>
+        <span class="logo-sub">R&D · RESEARCH &amp; INSIGHT</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="/introduction/">소개</a>
+        <a href="/insight/">인사이트</a>
+        <a href="/case/">연구사례</a>
+        <a href="/datalab/">데이터랩</a>
+        <a href="/project/">프로젝트</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 데이터랩 히어로 -->
+    <section class="datalab-hero">
+      <div class="container">
+        <div class="datalab-kicker">H VIRAL LAB · DATA LAB</div>
+        <h1 class="datalab-title">
+          디지털 흐름을 운영지능으로 전환하는<br />
+          에이치바이럴 마케팅 데이터 연구 영역
+        </h1>
+        <p class="datalab-sub">
+          H VIRAL LAB의 데이터랩은 브랜드가 디지털 환경에서 만들어내는 모든 흐름을<br />
+          정량 신호(Quantified Signals)와 구조적 패턴으로 해석하고,<br />
+          이를 기반으로 장기적인 <strong>Operational Intelligence</strong>와<br />
+          <strong>System Architecture</strong>를 설계하는 R&amp;D 영역입니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- 본문 영역 -->
+    <section class="datalab-section">
+      <div class="container">
+        <div class="datalab-grid">
+          <!-- 왼쪽: 개념/프레임 -->
+          <div>
+            <div class="datalab-block-title">1. Purpose of Data Lab</div>
+            <p class="datalab-block-text">
+              데이터랩은 단순한 수치 수집이 아니라,<br />
+              “어떤 흐름이 왜 만들어지고, 이 흐름이 브랜드 운영에 어떤 구조적 의미를 가지는가”에 집중합니다.<br /><br />
+              에이치바이럴 마케팅은 프로젝트별로 발생하는 데이터들을<br />
+              하나의 흐름(Flow)과 구조(Framework) 관점에서 다시 정리하고,<br />
+              브랜드가 시간이 지날수록 더 안정적인 디지털 운영 체계를 가질 수 있도록 지원합니다.
+            </p>
+
+            <div class="datalab-card" style="margin-top: 24px;">
+              <div class="datalab-tag">RESEARCH FOCUS</div>
+              Data Lab은 단기 성과를 부풀리는 방식이 아니라,<br />
+              브랜드가 장기적으로 유지할 수 있는 <strong>지속 가능한 Digital Framework</strong>를
+              정의하고 검증하는 역할을 수행합니다.
+            </div>
+          </div>
+
+          <!-- 오른쪽: 메서드/리스트 -->
+          <div>
+            <div class="datalab-block-title">2. Core Research Axes</div>
+            <ul class="datalab-list">
+              <li><strong>Behavioral Pattern Modeling</strong> – 사용자 행동의 반복 구조와 변화 지점을 모델링</li>
+              <li><strong>Signal Interpretation &amp; Flow Mapping</strong> – 디지털 접점에서 발생하는 신호를 해석하고 흐름으로 연결</li>
+              <li><strong>System Intelligence Reconstruction</strong> – 관찰된 패턴을 기반으로 운영지능 구조 재구성</li>
+              <li><strong>Long-Cycle Journey Design</strong> – 단기 이벤트가 아닌 장기 사이클 기준으로 여정을 설계</li>
+            </ul>
+
+            <div class="datalab-mini">
+              이 축들을 통해 Data Lab은<br />
+              브랜드가 스스로 축적하고 관리할 수 있는 데이터 기반 자산 구조를 정의합니다.
+            </div>
+          </div>
+        </div>
+
+        <!-- 두 번째 줄 -->
+        <div class="datalab-grid" style="margin-top: 40px;">
+          <div>
+            <div class="datalab-block-title">3. Methodology Layers</div>
+            <p class="datalab-block-text">
+              Data Lab의 연구 방식은 세 개의 Layer로 구성됩니다.
+            </p>
+            <ul class="datalab-list">
+              <li><strong>Layer 01 · Quantitative Observation</strong><br />
+                시간에 따라 반복적으로 나타나는 수치를 관찰하고, 흐름의 기본 패턴을 식별합니다.</li>
+              <li><strong>Layer 02 · Qualitative Interpretation</strong><br />
+                수치 뒤에 있는 의도, 맥락, 기대치 등을 해석하여 의미 있는 구조로 변환합니다.</li>
+              <li><strong>Layer 03 · System Blueprinting</strong><br />
+                산업별·서비스별 특성에 맞는 System Blueprint로 정리하여 운영 구조에 연결합니다.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="datalab-block-title">4. Application in Projects</div>
+            <p class="datalab-block-text">
+              데이터랩에서 도출된 결과는 다양한 프로젝트에서 다음과 같은 방식으로 적용됩니다.
+            </p>
+            <ul class="datalab-list">
+              <li>Brand Exposure Path 설계 및 점검</li>
+              <li>Information Density 조정 및 단계별 안내 구조 설계</li>
+              <li>Decision Support Structure 구축</li>
+              <li>Long-Cycle User Flow 관리 기준선 정의</li>
+            </ul>
+
+            <div class="datalab-card" style="margin-top: 18px;">
+              <div class="datalab-tag">ROLE OF DATA LAB</div>
+              에이치바이럴 마케팅의 Data Lab은<br />
+              각 프로젝트가 단발성으로 끝나지 않고,<br />
+              다음 단계의 구조 설계에 자연스럽게 연결될 수 있도록<br />
+              데이터를 하나의 흐름으로 정리하는 역할을 수행합니다.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © H VIRAL LAB. All rights reserved.
+  </footer>
+</body>
+</html>

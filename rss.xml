@@ -1,33 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>H VIRAL LAB – Digital Acquisition R&amp;D</title>
+    <title>H VIRAL LAB · Digital Acquisition R&amp;D</title>
     <link>https://hvirallab.co.kr/</link>
-    <description>에이치바이럴 LAB – 디지털 유입 R&amp;D, 풀퍼널 마케팅 분석, 데이터 기반 자동화 연구</description>
+    <description>에이치바이럴 마케팅 R&amp;D 조직의 디지털 유입·전환 시스템 연구와 프로젝트 업데이트를 정리한 피드입니다.</description>
     <language>ko</language>
 
+    <!-- 메인 LAB 소개 -->
     <item>
-      <title>LAB Introduction – 디지털 유입 시스템 R&amp;D</title>
-      <link>https://hvirallab.co.kr/introduction</link>
-      <description>브랜드 유입 흐름 분석, 자동화 운영 시스템, 데이터 기반 풀퍼널 구조 연구</description>
+      <title>LAB Overview – Digital Acquisition R&amp;D</title>
+      <link>https://hvirallab.co.kr/</link>
+      <description>에이치바이럴 마케팅 R&amp;D 조직의 디지털 유입 시스템 관점과 연구 방향을 소개하는 메인 페이지입니다.</description>
+      <pubDate>Mon, 01 Dec 2025 09:00:00 +0900</pubDate>
     </item>
 
+    <!-- 소개 -->
+    <item>
+      <title>Introduction – 디지털 유입 시스템 R&amp;D</title>
+      <link>https://hvirallab.co.kr/introduction/</link>
+      <description>에이치바이럴 마케팅 연구소의 역할, R&amp;D 범위, 디지털 유입 구조 설계 철학을 정리한 소개 페이지입니다.</description>
+      <pubDate>Mon, 01 Dec 2025 09:10:00 +0900</pubDate>
+    </item>
+
+    <!-- 인사이트 -->
     <item>
       <title>Insight – Data-driven Marketing Funnel</title>
-      <link>https://hvirallab.co.kr/insight</link>
-      <description>검색·탐색·신뢰·전환 단계별 디지털 퍼널 설계 인사이트</description>
+      <link>https://hvirallab.co.kr/insight/</link>
+      <description>디지털 풀퍼널 전환 흐름, 데이터 기반 유입 구조 해석 등 에이치바이럴 마케팅 인사이트를 정리한 페이지입니다.</description>
+      <pubDate>Mon, 01 Dec 2025 09:20:00 +0900</pubDate>
     </item>
 
+    <!-- 연구사례 -->
     <item>
-      <title>Case Study – 산업별 유입 성과 분석</title>
-      <link>https://hvirallab.co.kr/casestudy</link>
-      <description>업종별 디지털 유입 구조 연구 및 성과 사례</description>
+      <title>Research Case – Digital Project Case Flow</title>
+      <link>https://hvirallab.co.kr/case/</link>
+      <description>실제 프로젝트에서 관찰한 유입·전환 Flow를 정리한 디지털 프로젝트 연구사례 모음입니다.</description>
+      <pubDate>Mon, 01 Dec 2025 09:30:00 +0900</pubDate>
     </item>
 
+    <!-- 데이터랩 -->
     <item>
-      <title>Data Lab – H VIRAL Technical Structure</title>
-      <link>https://hvirallab.co.kr/datalab</link>
-      <description>데이터 기반 자동화 시스템, 운영 프레임워크, 기술적 분석 구조</description>
+      <title>DataLab – Signal &amp; Pattern Research</title>
+      <link>https://hvirallab.co.kr/datalab/</link>
+      <description>에이치바이럴 마케팅 R&amp;D 팀이 다루는 데이터 시그널, 패턴 분석, 실험 설계를 정리한 데이터랩 페이지입니다.</description>
+      <pubDate>Mon, 01 Dec 2025 09:40:00 +0900</pubDate>
+    </item>
+
+    <!-- 프로젝트 개요 -->
+    <item>
+      <title>Project R&amp;D – Digital System Design</title>
+      <link>https://hvirallab.co.kr/project/</link>
+      <description>산업별 디지털 유입·전환 시스템을 설계하는 에이치바이럴 마케팅 프로젝트 R&amp;D 개요 페이지입니다.</description>
+      <pubDate>Mon, 01 Dec 2025 09:50:00 +0900</pubDate>
+    </item>
+
+    <!-- PROJECT 01 -->
+    <item>
+      <title>PROJECT 01 – Localized Service Funnel Engineering</title>
+      <link>https://hvirallab.co.kr/project/local-funnel/</link>
+      <description>지역 기반 서비스 브랜드의 유입·예약·재방문 흐름을 재구성하고, 로컬 퍼널 시스템을 설계한 에이치바이럴 마케팅 프로젝트입니다.</description>
+      <pubDate>Mon, 01 Dec 2025 10:00:00 +0900</pubDate>
+    </item>
+
+    <!-- PROJECT 02 -->
+    <item>
+      <title>PROJECT 02 – Early-Stage Brand Structure Modeling</title>
+      <link>https://hvirallab.co.kr/project/brand-structure/</link>
+      <description>초기 단계 브랜드를 대상으로 데이터 신호와 유입 경로를 구조화한 브랜드 구조 설계 프로젝트입니다.</description>
+      <pubDate>Mon, 01 Dec 2025 10:10:00 +0900</pubDate>
+    </item>
+
+    <!-- PROJECT 03 -->
+    <item>
+      <title>PROJECT 03 – System Rebuilding &amp; Optimization</title>
+      <link>https://hvirallab.co.kr/project/system-optimization/</link>
+      <description>기존 디지털 구조를 리빌딩하고 전환율을 최적화하는 에이치바이럴 마케팅 시스템 고도화 프로젝트입니다.</description>
+      <pubDate>Mon, 01 Dec 2025 10:20:00 +0900</pubDate>
     </item>
 
   </channel>

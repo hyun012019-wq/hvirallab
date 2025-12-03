@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>PROJECT 01 | Localized Service Funnel Engineering – H VIRAL LAB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Meta -->
+  <meta name="description" content="에이치바이럴 마케팅 R&D 조직의 PROJECT 01. 지역 기반 서비스 환경에서 유입·예약·재방문 흐름을 분석하고 Localized Service Funnel Engineering 시스템을 설계하는 프로젝트입니다.">
+  <meta name="keywords" content="에이치바이럴, 에이치바이럴 마케팅, 에이치바이럴 광고, Local Funnel, Service Funnel Engineering, H VIRAL LAB">
+
+  <!-- OG -->
+  <meta property="og:title" content="PROJECT 01 | Localized Service Funnel Engineering – H VIRAL LAB">
+  <meta property="og:description" content="에이치바이럴 마케팅 R&D 조직이 지역 기반 서비스 브랜드를 위한 Localized Service Funnel Engineering 시스템을 설계하는 프로젝트입니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hvirallab.co.kr/project/local-funnel/">
+  <meta property="og:image" content="https://hvirallab.co.kr/og-image-wide.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PROJECT 01 | Localized Service Funnel Engineering – H VIRAL LAB">
+  <meta name="twitter:description" content="지역 기반 서비스 환경의 유입·예약·재방문 흐름을 분석하고 Localized Service Funnel Engineering 시스템을 설계하는 에이치바이럴 마케팅 R&D 프로젝트입니다.">
+  <meta name="twitter:image" content="https://hvirallab.co.kr/og-image-wide.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon-16x16.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+        "Noto Sans KR", system-ui, sans-serif;
+      background: radial-gradient(circle at top left, #1f3b78 0, #020617 55%, #000 100%);
+      color: #e5e7eb;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 헤더 공통 */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom,
+        rgba(3, 7, 18, 0.9),
+        rgba(3, 7, 18, 0.6)
+      );
+      border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo-area {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .logo-main {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .logo-sub {
+      font-size: 11px;
+      color: #9ca3af;
+      letter-spacing: 0.16em;
+      margin-top: 2px;
+    }
+
+    .logo-area,
+    .logo-main,
+    .logo-sub {
+      white-space: nowrap;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 14px;
+      flex-wrap: nowrap;
+    }
+
+    .nav-menu a {
+      position: relative;
+      padding-bottom: 4px;
+      color: #d1d5db;
+    }
+
+    .nav-menu a:hover {
+      color: #ffffff;
+    }
+
+    /* 페이지 히어로 */
+    .page-hero {
+      padding: 80px 0 40px;
+    }
+
+    .page-kicker {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #9ca3af;
+    }
+
+    .page-title {
+      margin-top: 12px;
+      font-size: 26px;
+      font-weight: 800;
+    }
+
+    .page-sub {
+      margin-top: 14px;
+      font-size: 14px;
+      color: #cbd5f5;
+    }
+
+    .page-sub strong {
+      font-weight: 700;
+    }
+
+    /* 본문 섹션 */
+    .section {
+      padding: 10px 0 40px;
+    }
+
+    .section-title {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 10px;
+    }
+
+    .section-box {
+      border-radius: 18px;
+      padding: 18px 20px 18px;
+      background: radial-gradient(circle at top left,
+        rgba(56, 189, 248, 0.16),
+        rgba(15, 23, 42, 0.96)
+      );
+      border: 1px solid rgba(148, 163, 184, 0.6);
+    }
+
+    .section-box h2 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .section-box p {
+      font-size: 13px;
+      color: #e5e7eb;
+    }
+
+    .list {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #e5e7eb;
+    }
+
+    .list li {
+      position: relative;
+      padding-left: 14px;
+      margin-top: 4px;
+    }
+
+    .list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #60a5fa;
+    }
+
+    footer {
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 18px 0 22px;
+      font-size: 11px;
+      text-align: center;
+      color: #9ca3af;
+      background: #020617;
+      margin-top: 40px;
+    }
+
+    /* 모바일 */
+    @media (max-width: 768px) {
+      .container { padding: 0 16px; }
+
+      .nav {
+        height: auto;
+        padding: 10px 0 8px;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .logo-area { align-items: center; }
+      .logo-main { font-size: 18px; }
+      .logo-sub { font-size: 9px; letter-spacing: 0.14em; }
+
+      .nav-menu {
+        width: 100%;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        column-gap: 18px;
+        font-size: 13px;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .nav-menu a { padding-bottom: 2px; }
+
+      .page-hero { padding: 60px 0 32px; }
+      .page-title { font-size: 23px; }
+      .page-sub { font-size: 13px; }
+    }
+
+    @media (max-width: 420px) {
+      .page-title { font-size: 21px; }
+      .page-sub { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="/" class="logo-area">
+        <span class="logo-main">H VIRAL LAB</span>
+        <span class="logo-sub">R&D · RESEARCH &amp; INSIGHT</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="/introduction/">소개</a>
+        <a href="/insight/">인사이트</a>
+        <a href="/case/">연구사례</a>
+        <a href="/datalab/">데이터랩</a>
+        <a href="/project/">프로젝트</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-kicker">PROJECT 01 · LOCAL SERVICE</div>
+        <h1 class="page-title">Localized Service Funnel Engineering</h1>
+        <p class="page-sub">
+          에이치바이럴 마케팅 R&amp;D 조직이 지역 기반 서비스 환경에서 발생하는
+          유입·예약·재방문 흐름을 <strong>실제 이용자 행동 데이터</strong>를 중심으로 해석하고,<br>
+          각 상권에 맞는 Localized Service Funnel Engineering 시스템을 설계하는 프로젝트입니다.<br>
+          이 프로젝트는 에이치바이럴 광고·데이터 모델을 활용해
+          지역 서비스 브랜드가 구조적인 경쟁력을 확보하도록 돕습니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- 목적 -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">PROJECT OBJECTIVE</div>
+        <div class="section-box">
+          <h2>지역 기반 유입 구조의 정교한 재구성</h2>
+          <p>
+            오프라인 거점에 의존하는 서비스 브랜드를 대상으로,
+            검색·지도 진입·직접 유입·재방문까지 이어지는 흐름을 세분화해 분석합니다.
+            에이치바이럴 마케팅 관점에서 각 단계의 전환 기여도를 측정하고,
+            지역별 특성이 반영된 Local Funnel Blueprint를 정의하는 것이 핵심 목적입니다.
+          </p>
+          <ul class="list">
+            <li>Local Entry-Point별 실제 방문/예약 전환 비율 측정</li>
+            <li>유입·예약·재방문으로 이어지는 기본 구조 모델링</li>
+            <li>지역별 상권 특성에 맞는 Funnel Type 분류</li>
+            <li>에이치바이럴 광고 집행 시 활용 가능한 구조 기준 마련</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 방법론 -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">METHODOLOGY</div>
+        <div class="section-box">
+          <h2>Behavior Signal 기반 Local Funnel 모델링</h2>
+          <p>
+            PROJECT 01은 단순 유입 수치가 아니라,
+            실제 이용자의 행동 패턴에서 추출한 Signal을 중심으로 Funnel을 재설계합니다.
+          </p>
+          <ul class="list">
+            <li>Local Query &amp; Entry Signal Tracking</li>
+            <li>Map Entry · Direct Entry · Referral Path 비교 분석</li>
+            <li>예약·문의 발생 시점 기준 Conversion Path Mapping</li>
+            <li>지역·업종별 Funnel Benchmarking &amp; Re-Design</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 산출물 -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">OUTPUT</div>
+        <div class="section-box">
+          <h2>Local Funnel Blueprint &amp; 운영 가이드</h2>
+          <p>
+            프로젝트를 통해 산출된 결과물은
+            에이치바이럴 마케팅 조직의 지역 서비스 고객사에도 적용 가능한 형태로 정리됩니다.
+          </p>
+          <ul class="list">
+            <li>Local Funnel Blueprint &amp; Entry-Point Matrix</li>
+            <li>지역 서비스 브랜드 전환 구조 리포트</li>
+            <li>에이치바이럴 광고·운영 전략 수립을 위한 구조 레퍼런스</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © H VIRAL LAB. All rights reserved.
+    본 페이지는 에이치바이럴 마케팅 R&amp;D 조직의 PROJECT 01 소개용으로 운영됩니다.
+  </footer>
+</body>
+</html>

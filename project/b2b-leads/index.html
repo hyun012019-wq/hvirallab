@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>PROJECT 03 | B2B 리드 생성·문의 시스템 연구</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon-16x16.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; max-width: 100%; overflow-x: hidden; scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+        "Noto Sans KR", system-ui, sans-serif;
+      background: radial-gradient(circle at top left, #1f3b78 0, #020617 55%, #000 100%);
+      color: #e5e7eb;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(3,7,18,0.9), rgba(3,7,18,0.6));
+      border-bottom: 1px solid rgba(148,163,184,0.3);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .logo-area { display: flex; flex-direction: column; justify-content: center; }
+    .logo-main { font-size: 18px; font-weight: 800; letter-spacing: 0.08em; }
+    .logo-sub { font-size: 10px; color: #9ca3af; letter-spacing: 0.16em; margin-top: 1px; }
+    .nav-menu { display: flex; align-items: center; gap: 20px; font-size: 13px; }
+    .nav-menu a:hover { color: #fff; }
+
+    main { padding: 60px 0 56px; }
+
+    .badge { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #9ca3af; margin-bottom: 6px; }
+    h1 { font-size: 24px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 10px; }
+    .meta { font-size: 12px; color: #9ca3af; margin-bottom: 22px; }
+
+    section { margin-top: 28px; }
+    h2 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    p { font-size: 14px; color: #e5e7eb; }
+    ul { margin-top: 8px; padding-left: 18px; }
+    li { font-size: 14px; color: #d1d5db; margin-bottom: 4px; }
+
+    .highlight-box {
+      margin-top: 18px;
+      padding: 14px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(129,140,248,0.6);
+      background: radial-gradient(circle at top left, rgba(30,64,175,0.55), rgba(15,23,42,0.98));
+      font-size: 13px;
+    }
+
+    .back-link {
+      margin-top: 32px;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.8);
+    }
+
+    footer {
+      border-top: 1px solid rgba(31,41,55,0.9);
+      padding: 16px 0 20px;
+      font-size: 11px;
+      text-align: center;
+      color: #9ca3af;
+      background: #020617;
+    }
+
+    @media (max-width:640px) {
+      .nav { flex-direction: column; align-items: flex-start; gap: 6px; height: auto; padding: 8px 0 8px; }
+      .nav-menu { flex-wrap: wrap; gap: 12px; }
+      h1 { font-size: 21px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="/" class="logo-area">
+        <span class="logo-main">H VIRAL LAB</span>
+        <span class="logo-sub">R&D · RESEARCH &amp; INSIGHT</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="/introduction/">소개</a>
+        <a href="/insight/">인사이트</a>
+        <a href="/case/">연구사례</a>
+        <a href="/datalab/">데이터랩</a>
+        <a href="/project/">프로젝트</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="badge">PROJECT 03 · B2B SERVICE</div>
+      <h1>B2B 리드 생성·문의 시스템 연구</h1>
+      <div class="meta">
+        B2B 서비스 기업의 리드 생성 구조를 분석하고,
+        에이치바이럴 H VIRAL LAB이 정의한 디지털 유입·문의 시스템 모델을 정리한 프로젝트입니다.
+      </div>
+
+      <section>
+        <h2>1. 연구 대상</h2>
+        <p>
+          이 프로젝트는 SaaS, B2B 솔루션, 전문 서비스 기업처럼
+          “상담·제안 요청”이 핵심 목표인 브랜드를 중심으로 진행되었습니다.
+          H VIRAL LAB은 영업팀 중심 구조에 의존하던 리드 생성 방식을
+          디지털 유입 관점에서 다시 설계했습니다.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. 핵심 지표 정의</h2>
+        <ul>
+          <li>타깃 계정에서의 브랜드 검색·방문 빈도</li>
+          <li>레퍼런스·사례·화이트페이퍼 열람 이후 문의 전환율</li>
+          <li>랜딩 페이지 체류 시간과 스크롤 깊이</li>
+          <li>상담 요청 양식 작성 완료율 및 이탈 항목</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. 디지털 유입 시스템 설계</h2>
+        <p>
+          에이치바이럴 연구소는 B2B 리드 생성 구조를 아래 단계로 나누어 설계했습니다.
+        </p>
+        <ul>
+          <li><strong>Problem &amp; Solution Awareness</strong> · 문제 인식과 솔루션 카테고리 인지</li>
+          <li><strong>Evidence &amp; Reference</strong> · 레퍼런스·사례·데이터 기반 신뢰 형성</li>
+          <li><strong>Consulting Intent</strong> · 구체적인 상담/문의 의사 표현 단계</li>
+          <li><strong>Deal Pipeline</strong> · 영업 파이프라인으로 전환되는 이후 단계</li>
+        </ul>
+
+        <div class="highlight-box">
+          H VIRAL LAB은 각 단계에서 필요한 콘텐츠와 CTA(Call To Action)를 정의하고,
+          실제 B2B 브랜드의 데이터를 통해 “리드 생성 효율이 높은 구조”를 검증했습니다.
+        </div>
+      </section>
+
+      <section>
+        <h2>4. 프로젝트 인사이트</h2>
+        <ul>
+          <li>“기능 소개”보다 “문제 정의와 비교 구조”가 리드 생성에 더 큰 영향을 미침</li>
+          <li>레퍼런스/사례 콘텐츠가 충분하지 않을 때, 광고 효율이 빠르게 감소하는 패턴 확인</li>
+          <li>문의 양식 필수 항목 수가 늘어날수록, 고관여 B2B라도 이탈률이 증가하는 지점 기록</li>
+          <li>마케팅과 세일즈가 공유할 수 있는 공통 데이터 지표 세트 정의</li>
+        </ul>
+      </section>
+
+      <a class="back-link" href="/project/">
+        ← 프로젝트 목록으로 돌아가기
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    © H VIRAL LAB. All rights reserved.
+  </footer>
+</body>
+</html>

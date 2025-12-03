@@ -13,16 +13,17 @@
   <meta property="og:title" content="H VIRAL LAB 소개 | 디지털 유입 시스템 연구소">
   <meta property="og:description" content="브랜드의 디지털 유입 구조를 데이터 기반으로 연구·분석하는 에이치바이럴 R&D 조직입니다.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="[https://hvirallab.co.kr/introduction/](https://hvirallab.co.kr/introduction/)">
-  <meta property="og:image" content="[https://hvirallab.co.kr/og-image-wide.png](https://hvirallab.co.kr/og-image-wide.png)">
+  <meta property="og:url" content="https://hvirallab.co.kr/introduction/">
+  <meta property="og:image" content="https://hvirallab.co.kr/og-image-wide.png">
 
   <!-- 파비콘 -->
   <link rel="icon" type="image/svg+xml" href="/favicon-16x16.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 
-  <!-- 스타일 -->
+  <!-- 스타일 : 홈(index)와 동일한 헤더 + 소개 전용 본문 -->
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     html, body {
       width: 100%;
       max-width: 100%;
@@ -48,14 +49,18 @@
       padding: 0 20px;
     }
 
-    /* 헤더 구조 — 다른 페이지와 동일 */
+    /* ====== 헤더 (index와 1:1 동일) ====== */
     header {
       position: sticky;
       top: 0;
       z-index: 50;
       backdrop-filter: blur(14px);
-      background: linear-gradient(to bottom, rgba(3,7,18,0.9), rgba(3,7,18,0.6));
-      border-bottom: 1px solid rgba(148,163,184,0.3);
+      background: linear-gradient(
+        to bottom,
+        rgba(3, 7, 18, 0.9),
+        rgba(3, 7, 18, 0.6)
+      );
+      border-bottom: 1px solid rgba(148, 163, 184, 0.3);
     }
 
     .nav {
@@ -84,14 +89,22 @@
       margin-top: 2px;
     }
 
+    .logo-area,
+    .logo-main,
+    .logo-sub {
+      white-space: nowrap;
+    }
+
     .nav-menu {
       display: flex;
       align-items: center;
       gap: 26px;
       font-size: 14px;
+      flex-wrap: nowrap;
     }
 
     .nav-menu a {
+      position: relative;
       padding-bottom: 4px;
       color: #d1d5db;
     }
@@ -100,9 +113,10 @@
       color: #ffffff;
     }
 
-    /* 히어로 — 홈/인사이트 기준으로 정렬 */
+    /* ====== 소개 페이지 전용 영역 ====== */
+
     .intro-hero {
-      padding: 80px 0 64px;  /* 기존 72px 0 40px → 홈과 동일 값 */
+      padding: 80px 0 40px; /* 홈이랑 비슷한 위 여백 */
     }
 
     .intro-kicker {
@@ -114,19 +128,17 @@
 
     .intro-title {
       margin-top: 12px;
-      font-size: 30px;       /* 기존 28px → 홈 hero-title과 동일 */
+      font-size: 28px;
       font-weight: 800;
-      line-height: 1.3;
     }
 
     .intro-sub {
-      margin-top: 18px;      /* 홈 hero-sub와 맞춤 */
+      margin-top: 14px;
       font-size: 15px;
       color: #cbd5f5;
       line-height: 1.7;
     }
 
-    /* 본문 */
     .intro-section {
       padding: 20px 0 60px;
     }
@@ -157,9 +169,11 @@
       background: #020617;
     }
 
-    /* 모바일 최적화 */
+    /* ====== 모바일 (index와 동일 패턴) ====== */
     @media (max-width: 768px) {
-      .container { padding: 0 16px; }
+      .container {
+        padding: 0 16px;
+      }
 
       .nav {
         height: auto;
@@ -169,8 +183,14 @@
         gap: 8px;
       }
 
-      .logo-main { font-size: 18px; }
-      .logo-sub { font-size: 9px; }
+      .logo-main {
+        font-size: 18px;
+      }
+
+      .logo-sub {
+        font-size: 9px;
+        letter-spacing: 0.14em;
+      }
 
       .nav-menu {
         width: 100%;
@@ -180,18 +200,34 @@
         font-size: 13px;
       }
 
+      .nav-menu a {
+        padding-bottom: 2px;
+      }
+
       .intro-hero {
-        padding: 52px 0 40px;    /* 홈 hero와 동일 모바일 패딩 */
+        padding: 56px 0 32px;
       }
 
       .intro-title {
-        font-size: 23px;         /* 홈 hero-title 모바일 기준과 동일 */
-        line-height: 1.35;
+        font-size: 24px;
       }
 
       .intro-sub {
         font-size: 14px;
-        margin-top: 14px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .nav-menu {
+        column-gap: 14px;
+      }
+
+      .intro-title {
+        font-size: 21px;
+      }
+
+      .intro-sub {
+        font-size: 13px;
       }
     }
   </style>

@@ -17,7 +17,7 @@
       padding: 0;
     }
 
-    /* 🔥 가로 치우침 방지용 추가 */
+    /* 🔥 가로 치우침 방지용 */
     html,
     body {
       width: 100%;
@@ -668,6 +668,30 @@
       <div>본 사이트는 디지털 유입 구조 R&amp;D 아카이브용으로 운영됩니다.</div>
     </div>
   </footer>
+
+  <!-- 네비게이션 부드러운 스크롤 -->
+  <script>
+    const HEADER_OFFSET = 72; // 상단 헤더 높이
+
+    document.querySelectorAll('nav.nav-menu a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const href = link.getAttribute("href");
+        const id = href.substring(1);
+        const target = document.getElementById(id);
+        if (!target) return;
+
+        e.preventDefault();
+
+        const rect = target.getBoundingClientRect();
+        const scrollTop = window.pageYOffset + rect.top - HEADER_OFFSET;
+
+        window.scrollTo({
+          top: scrollTop,
+          behavior: "smooth",
+        });
+      });
+    });
+  </script>
 
   <!-- 간단 텍스트 슬라이더 -->
   <script>

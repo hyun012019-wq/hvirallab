@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>H VIRAL LAB 프로젝트 | 에이치바이럴 마케팅 시스템 R&D</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- 메타 -->
+  <meta name="description" content="H VIRAL LAB 프로젝트. 에이치바이럴 마케팅 에이전시는 산업별 디지털 유입 시스템을 정교하게 설계하고, 고도화된 분석으로 구조를 연구하는 전문 R&D 조직입니다.">
+  <meta name="keywords" content="에이치바이럴 마케팅, H VIRAL LAB, 디지털 R&D, 프로젝트 분석, 시스템 설계">
+
+  <!-- OG -->
+  <meta property="og:title" content="H VIRAL LAB 프로젝트 | 디지털 시스템 R&D">
+  <meta property="og:description" content="에이치바이럴 마케팅 R&D 조직이 수행한 디지털 시스템 설계 프로젝트를 공개합니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hvirallab.co.kr/project/">
+  <meta property="og:image" content="https://hvirallab.co.kr/og-image-wide.png">
+
+  <!-- 트위터 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="H VIRAL LAB 프로젝트 | 디지털 시스템 설계 R&D">
+  <meta name="twitter:description" content="에이치바이럴 마케팅 R&D 조직이 수행한 디지털 시스템 설계 프로젝트 상세.">
+  <meta name="twitter:image" content="https://hvirallab.co.kr/og-image-wide.png">
+
+  <!-- 파비콘 -->
+  <link rel="icon" type="image/svg+xml" href="/favicon-16x16.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+
+  <!-- 스타일(index 기준 1:1 통일) -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; max-width: 100%; overflow-x: hidden; scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo","Noto Sans KR", system-ui, sans-serif;
+      background: radial-gradient(circle at top left, #1f3b78 0, #020617 55%, #000 100%);
+      color: #e5e7eb; line-height: 1.6; min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+    /* 헤더(완전 동일) */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(3,7,18,0.9), rgba(3,7,18,0.6));
+      border-bottom: 1px solid rgba(148,163,184,0.3);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .logo-area { display: flex; flex-direction: column; justify-content: center; }
+    .logo-main { font-size: 20px; font-weight: 800; letter-spacing: 0.08em; }
+    .logo-sub { font-size: 11px; color: #9ca3af; letter-spacing: 0.16em; margin-top: 2px; }
+    .logo-area, .logo-main, .logo-sub { white-space: nowrap; }
+    .nav-menu {
+      display: flex; align-items: center; gap: 26px; font-size: 14px; flex-wrap: nowrap;
+    }
+    .nav-menu a { padding-bottom: 4px; color: #d1d5db; }
+    .nav-menu a:hover { color: #ffffff; }
+
+    /* 히어로 영역 */
+    .page-hero { padding: 80px 0 50px; }
+    .page-kicker {
+      font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #9ca3af;
+    }
+    .page-title { margin-top: 12px; font-size: 28px; font-weight: 800; }
+    .page-sub { margin-top: 14px; font-size: 14px; color: #cbd5f5; }
+
+    /* 프로젝트 카드 */
+    .project-section { padding: 0 0 60px; }
+    .project-grid { display: flex; flex-direction: column; gap: 18px; }
+    .project-card {
+      border-radius: 18px;
+      padding: 22px 22px 20px;
+      background: radial-gradient(circle at top left, rgba(59,130,246,0.45), rgba(15,23,42,0.95));
+      border: 1px solid rgba(148,163,184,0.5);
+    }
+    .project-label { font-size: 11px; letter-spacing: 0.14em; color: #bfdbfe; text-transform: uppercase; }
+    .project-title { margin-top: 8px; font-size: 17px; font-weight: 700; }
+    .project-desc { margin-top: 8px; font-size: 13px; color: #e5e7eb; opacity: 0.9; }
+
+    /* 푸터 */
+    footer {
+      border-top: 1px solid rgba(31,41,55,0.9);
+      padding: 18px 0 22px; font-size: 11px; text-align: center;
+      color: #9ca3af; background: #020617;
+    }
+
+    /* 모바일 */
+    @media (max-width: 768px) {
+      .container { padding: 0 16px; }
+      .nav { height: auto; padding: 10px 0 8px; flex-direction: column; align-items: center; gap: 8px; }
+      .logo-area { align-items: center; }
+      .logo-main { font-size: 18px; }
+      .logo-sub { font-size: 9px; letter-spacing: 0.14em; }
+      .nav-menu { width: 100%; flex-wrap: wrap; justify-content: center; row-gap: 8px; column-gap: 18px; font-size: 13px; }
+
+      .page-hero { padding: 56px 0 32px; }
+      .page-title { font-size: 24px; }
+      .page-sub { font-size: 13px; }
+    }
+
+    @media (max-width: 420px) {
+      .nav-menu { column-gap: 14px; }
+      .page-title { font-size: 22px; }
+      .page-sub { font-size: 12px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a href="/" class="logo-area">
+        <span class="logo-main">H VIRAL LAB</span>
+        <span class="logo-sub">R&D · RESEARCH &amp; INSIGHT</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="/introduction/">소개</a>
+        <a href="/insight/">인사이트</a>
+        <a href="/case/">연구사례</a>
+        <a href="/datalab/">데이터랩</a>
+        <a href="/project/">프로젝트</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-kicker">PROJECT R&D</div>
+        <h1 class="page-title">디지털 시스템 설계 프로젝트</h1>
+
+        <p class="page-sub">
+          에이치바이럴 마케팅 R&amp;D 조직은 산업별 환경을 기반으로<br>
+          디지털 유입·전환 구조를 정교하게 분석하고 시스템을 설계합니다.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="container">
+        <div class="project-grid">
+
+          <article class="project-card">
+            <div class="project-label">PROJECT 01</div>
+            <h2 class="project-title">Localized Service Funnel Engineering</h2>
+            <p class="project-desc">
+              지역 기반 서비스 환경에서 발생하는 유입 흐름을 재구성하고,
+              실제 이용자의 전환 지점을 중심으로 퍼널 시스템을 정교하게 설계한 프로젝트입니다.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-label">PROJECT 02</div>
+            <h2 class="project-title">Early-Stage Brand Structure Modeling</h2>
+            <p class="project-desc">
+              초기 단계 브랜드의 데이터 신호를 기반으로 구조화된 
+              유입 경로를 설계하고 안정적인 전환 체계를 구축한 R&D 프로젝트입니다.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-label">PROJECT 03</div>
+            <h2 class="project-title">System Rebuilding & Optimization</h2>
+            <p class="project-desc">
+              기존 디지털 구조를 해석하고 필요한 구간을 재정의하여,
+              실제 시장 환경에서 지속 가능한 전환 시스템을 완성한 프로젝트입니다.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © H VIRAL LAB. All rights reserved.
+    본 사이트는 에이치바이럴 마케팅 R&D 프로젝트 페이지입니다.
+  </footer>
+</body>
+</html>

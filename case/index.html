@@ -5,18 +5,15 @@
   <title>H VIRAL LAB 연구사례 | Digital Project Case Archive</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- 필수 메타 태그 -->
-  <meta name="description" content="H VIRAL LAB 연구사례 아카이브. 실제 프로젝트를 통해 관찰한 디지털 유입·전환 흐름을 Case Study 형식으로 정리합니다.">
-  <meta name="keywords" content="H VIRAL LAB, Digital Case Study, 유입 구조, 전환 흐름, R&D, Funnel 분석">
+  <!-- 메타 태그 -->
+  <meta name="description" content="H VIRAL LAB 연구사례 아카이브. 실제 프로젝트에서 관찰한 디지털 유입 구조와 전환 흐름을 정리한 케이스 스터디 컬렉션입니다.">
+  <meta name="keywords" content="H VIRAL LAB, 디지털 유입 구조, R&D, 프로젝트 케이스, 마케팅 연구소">
 
-  <!-- 기본 OG 태그 -->
+  <!-- OG 태그 -->
   <meta property="og:title" content="H VIRAL LAB 연구사례 | Digital Project Case Archive">
-  <meta property="og:description" content="산업별 디지털 유입·전환 구조를 실제 프로젝트 사례로 정리한 H VIRAL LAB의 Case Archive입니다.">
+  <meta property="og:description" content="브랜드의 디지털 접점에서 관찰한 유입 구조와 전환 흐름을 정리한 H VIRAL LAB의 프로젝트 연구사례입니다.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hvirallab.co.kr/case/">
-  <!-- 정사각형 OG 이미지 -->
-  <meta property="og:image" content="https://hvirallab.co.kr/og-image.png">
-  <!-- 가로형 OG 이미지 (SNS 확대 미리보기용) -->
   <meta property="og:image" content="https://hvirallab.co.kr/og-image-wide.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -24,7 +21,7 @@
   <!-- 트위터 카드 -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="H VIRAL LAB 연구사례 | Digital Project Case Archive">
-  <meta name="twitter:description" content="Digital acquisition & conversion flow를 실제 프로젝트 기준으로 분석한 H VIRAL LAB Case Archive.">
+  <meta name="twitter:description" content="프로젝트 현장에서 관찰한 디지털 유입·전환 흐름을 구조화한 H VIRAL LAB의 케이스 스터디입니다.">
   <meta name="twitter:image" content="https://hvirallab.co.kr/og-image-wide.png">
 
   <!-- 파비콘 -->
@@ -73,7 +70,7 @@
       padding: 0 20px;
     }
 
-    /* 헤더 (index와 동일) */
+    /* ===== 헤더 (홈과 동일) ===== */
     header {
       position: sticky;
       top: 0;
@@ -149,7 +146,7 @@
       white-space: nowrap;
     }
 
-    /* 페이지 히어로 */
+    /* ===== 페이지 히어로 & 케이스 리스트 ===== */
     .page-hero {
       padding: 80px 0 40px;
     }
@@ -163,7 +160,7 @@
 
     .page-title {
       margin-top: 12px;
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 800;
     }
 
@@ -173,7 +170,6 @@
       color: #cbd5f5;
     }
 
-    /* 연구사례 카드 리스트 - 텍스트 짧게 */
     .case-section {
       padding: 0 0 56px;
     }
@@ -187,10 +183,12 @@
     .case-card {
       border-radius: 18px;
       padding: 18px 20px 16px;
-      background: radial-gradient(circle at top left,
+      background: radial-gradient(
+        circle at top left,
         rgba(37, 99, 235, 0.5),
-        rgba(15, 23, 42, 0.95));
-      border: 1px solid rgba(148,163,184,0.5);
+        rgba(15, 23, 42, 0.95)
+      );
+      border: 1px solid rgba(148, 163, 184, 0.5);
     }
 
     .case-label {
@@ -222,7 +220,7 @@
       background: #020617;
     }
 
-    /* 모바일 (index와 동일 세팅) */
+    /* ===== 모바일 공통 레이아웃 (홈과 동일) ===== */
     @media (max-width: 768px) {
       .container {
         padding: 0 16px;
@@ -232,8 +230,12 @@
         height: auto;
         padding: 10px 0 8px;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 8px;
+      }
+
+      .logo-area {
+        align-items: center;
       }
 
       .logo-main {
@@ -251,6 +253,8 @@
         row-gap: 8px;
         column-gap: 18px;
         font-size: 13px;
+        justify-content: center;
+        text-align: center;
       }
 
       .nav-menu a {
@@ -262,7 +266,7 @@
       }
 
       .page-title {
-        font-size: 23px;
+        font-size: 22px;
       }
 
       .page-sub {
@@ -276,7 +280,7 @@
       }
 
       .page-title {
-        font-size: 21px;
+        font-size: 20px;
       }
 
       .page-sub {
@@ -309,13 +313,13 @@
         <div class="page-kicker">RESEARCH CASE ARCHIVE</div>
         <h1 class="page-title">Digital Project Case Archive</h1>
         <p class="page-sub">
-          실제 프로젝트에서 관찰한 <strong>유입·전환 Flow</strong>를<br>
-          Case Study 형식으로 정리한 H VIRAL LAB의 연구사례입니다.
+          H VIRAL LAB이 수행한 프로젝트 가운데,<br>
+          디지털 유입 구조와 전환 흐름을 중심으로 분석·정리한 연구사례입니다.
         </p>
       </div>
     </section>
 
-    <!-- 연구사례 리스트 (짧고 명확하게) -->
+    <!-- 연구사례 리스트 -->
     <section class="case-section">
       <div class="container">
         <div class="case-grid">
@@ -323,8 +327,8 @@
             <div class="case-label">CASE 01</div>
             <h2 class="case-title">Local Business Funnel Re-Design</h2>
             <p class="case-desc">
-              동네 기반 서비스 브랜드의 유입–예약–재방문 흐름을 분석하고
-              Single Funnel → Multi-Entry Funnel 구조로 재설계한 사례입니다.
+              동네 기반 서비스 브랜드의 유입–예약–재방문 플로우를 분석하고,
+              Single Funnel → Multi-Entry Funnel 구조로 재설계한 케이스입니다.
             </p>
           </article>
 
@@ -334,16 +338,17 @@
             <p class="case-desc">
               인지도가 거의 없는 초기 브랜드를 대상으로,
               Search · Content · Review 역할을 분리해
-              초기 유입 구조를 설계한 프로젝트입니다.
+              초기 유입 구조를 설계한 프로젝트 케이스입니다.
             </p>
           </article>
 
           <article class="case-card">
             <div class="case-label">CASE 03</div>
-            <h2 class="case-title">Legacy Channel Re-Structuring</h2>
+            <h2 class="case-title">Channel Re-Build & Conversion Lift</h2>
             <p class="case-desc">
-              오래 운영된 디지털 채널의 구조를 R&D 관점에서 다시 매핑하고,
-              핵심 전환 Flow 중심으로 정보 구조를 단순화한 사례입니다.
+              기존 디지털 채널 자산을 유지한 상태에서,
+              여정별 역할을 재정의하고 구조를 리빌드해
+              전환 지표를 끌어올린 사례를 정리한 리포트입니다.
             </p>
           </article>
         </div>
@@ -353,6 +358,7 @@
 
   <footer>
     © H VIRAL LAB. All rights reserved.
+    본 사이트는 디지털 유입 구조 R&D 연구소 연구사례 페이지입니다.
   </footer>
 </body>
 </html>

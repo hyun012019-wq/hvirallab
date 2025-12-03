@@ -5,15 +5,17 @@
   <title>H VIRAL LAB 연구사례 | Digital Project Case Archive</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- 메타 태그 -->
+  <!-- 메타 태그 (연구사례용) -->
   <meta name="description" content="H VIRAL LAB 연구사례 아카이브. 실제 프로젝트에서 관찰한 디지털 유입 구조와 전환 흐름을 정리한 케이스 스터디 컬렉션입니다.">
   <meta name="keywords" content="H VIRAL LAB, 디지털 유입 구조, R&D, 프로젝트 케이스, 마케팅 연구소">
 
-  <!-- OG 태그 -->
+  <!-- 기본 OG 태그 -->
   <meta property="og:title" content="H VIRAL LAB 연구사례 | Digital Project Case Archive">
   <meta property="og:description" content="브랜드의 디지털 접점에서 관찰한 유입 구조와 전환 흐름을 정리한 H VIRAL LAB의 프로젝트 연구사례입니다.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hvirallab.co.kr/case/">
+  <!-- OG 이미지 -->
+  <meta property="og:image" content="https://hvirallab.co.kr/og-image.png">
   <meta property="og:image" content="https://hvirallab.co.kr/og-image-wide.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -24,11 +26,12 @@
   <meta name="twitter:description" content="프로젝트 현장에서 관찰한 디지털 유입·전환 흐름을 구조화한 H VIRAL LAB의 케이스 스터디입니다.">
   <meta name="twitter:image" content="https://hvirallab.co.kr/og-image-wide.png">
 
-  <!-- 파비콘 -->
+  <!-- 파비콘 (홈과 동일) -->
   <link rel="icon" type="image/svg+xml" href="/favicon-16x16.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 
   <style>
+    /* ====== 여기까지는 홈 index와 구조 같게 유지 ====== */
     * {
       margin: 0;
       padding: 0;
@@ -70,7 +73,7 @@
       padding: 0 20px;
     }
 
-    /* ===== 헤더 (홈과 동일) ===== */
+    /* 헤더 (홈과 100% 동일) */
     header {
       position: sticky;
       top: 0;
@@ -146,7 +149,64 @@
       white-space: nowrap;
     }
 
-    /* ===== 페이지 히어로 & 케이스 리스트 ===== */
+    footer {
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 18px 0 22px;
+      font-size: 11px;
+      text-align: center;
+      color: #9ca3af;
+      background: #020617;
+    }
+
+    /* ====== 모바일 공통 레이아웃 (홈과 완전 동일) ====== */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .nav {
+        height: auto;
+        padding: 10px 0 8px;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .logo-area {
+        align-items: center;
+      }
+
+      .logo-main {
+        font-size: 18px;
+      }
+
+      .logo-sub {
+        font-size: 9px;
+        letter-spacing: 0.14em;
+      }
+
+      .nav-menu {
+        width: 100%;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        column-gap: 18px;
+        font-size: 13px;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .nav-menu a {
+        padding-bottom: 2px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .nav-menu {
+        column-gap: 14px;
+      }
+    }
+
+    /* ====== 여기부터는 연구사례 전용 스타일 ====== */
     .page-hero {
       padding: 80px 0 40px;
     }
@@ -211,78 +271,22 @@
       opacity: 0.9;
     }
 
-    footer {
-      border-top: 1px solid rgba(31, 41, 55, 0.9);
-      padding: 18px 0 22px;
-      font-size: 11px;
-      text-align: center;
-      color: #9ca3af;
-      background: #020617;
-    }
-
-    /* ===== 모바일 공통 레이아웃 (홈과 동일) ===== */
     @media (max-width: 768px) {
-      .container {
-        padding: 0 16px;
-      }
-
-      .nav {
-        height: auto;
-        padding: 10px 0 8px;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .logo-area {
-        align-items: center;
-      }
-
-      .logo-main {
-        font-size: 18px;
-      }
-
-      .logo-sub {
-        font-size: 9px;
-        letter-spacing: 0.14em;
-      }
-
-      .nav-menu {
-        width: 100%;
-        flex-wrap: wrap;
-        row-gap: 8px;
-        column-gap: 18px;
-        font-size: 13px;
-        justify-content: center;
-        text-align: center;
-      }
-
-      .nav-menu a {
-        padding-bottom: 2px;
-      }
-
       .page-hero {
         padding: 56px 0 32px;
       }
-
       .page-title {
         font-size: 22px;
       }
-
       .page-sub {
         font-size: 13px;
       }
     }
 
     @media (max-width: 420px) {
-      .nav-menu {
-        column-gap: 14px;
-      }
-
       .page-title {
         font-size: 20px;
       }
-
       .page-sub {
         font-size: 12px;
       }
@@ -314,7 +318,8 @@
         <h1 class="page-title">Digital Project Case Archive</h1>
         <p class="page-sub">
           H VIRAL LAB이 수행한 프로젝트 가운데,<br>
-          디지털 유입 구조와 전환 흐름을 중심으로 분석·정리한 연구사례입니다.
+          디지털 접점에서 관찰된 유입·전환 Flow를 중심으로<br>
+          구조와 시사점을 정리한 케이스 스터디입니다.
         </p>
       </div>
     </section>
@@ -327,8 +332,8 @@
             <div class="case-label">CASE 01</div>
             <h2 class="case-title">Local Business Funnel Re-Design</h2>
             <p class="case-desc">
-              동네 기반 서비스 브랜드의 유입–예약–재방문 플로우를 분석하고,
-              Single Funnel → Multi-Entry Funnel 구조로 재설계한 케이스입니다.
+              동네 기반 서비스 브랜드의 유입–예약–재방문 플로우를 분석하고,<br>
+              Single Funnel → Multi-Entry Funnel 구조로 재설계한 프로젝트입니다.
             </p>
           </article>
 
@@ -336,9 +341,9 @@
             <div class="case-label">CASE 02</div>
             <h2 class="case-title">New Brand Launch Journey</h2>
             <p class="case-desc">
-              인지도가 거의 없는 초기 브랜드를 대상으로,
-              Search · Content · Review 역할을 분리해
-              초기 유입 구조를 설계한 프로젝트 케이스입니다.
+              인지도가 거의 없는 초기 브랜드를 대상으로,<br>
+              Search · Content · Review 역할을 분리해<br>
+              초기 유입 구조와 전환 흐름을 설계한 케이스입니다.
             </p>
           </article>
 
@@ -346,9 +351,9 @@
             <div class="case-label">CASE 03</div>
             <h2 class="case-title">Channel Re-Build & Conversion Lift</h2>
             <p class="case-desc">
-              기존 디지털 채널 자산을 유지한 상태에서,
-              여정별 역할을 재정의하고 구조를 리빌드해
-              전환 지표를 끌어올린 사례를 정리한 리포트입니다.
+              기존 디지털 채널 자산을 유지한 상태에서,<br>
+              Journey별 역할을 재정의하고 구조를 리빌드해<br>
+              핵심 전환 지표를 끌어올린 프로젝트 리포트입니다.
             </p>
           </article>
         </div>

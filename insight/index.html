@@ -9,53 +9,26 @@
   <meta name="description" content="H VIRAL LAB 인사이트 아카이브. 에이치바이럴이 산업별 고객 여정, 검색 패턴, 디지털 유입 구조를 분석한 리포트를 제공합니다.">
   <meta name="keywords" content="에이치바이럴 인사이트, H VIRAL LAB, 디지털 유입 분석, 고객 여정 리포트, 마케팅 인사이트">
 
-  <!-- 기본 OG 태그 -->
-<meta property="og:title" content="H VIRAL LAB | 디지털 유입 시스템 R&D 센터">
-<meta property="og:description" content="브랜드의 온라인 유입 흐름을 기반으로 디지털 유입 시스템을 연구·개발하는 전문 R&D 센터입니다.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hvirallab.co.kr">
-
-<!-- 정사각형 OG 이미지 -->
-<meta property="og:image" content="https://hvirallab.co.kr/og-image.png">
-
-<!-- 가로형 OG 이미지 (SNS 확대 미리보기용) -->
-<meta property="og:image" content="https://hvirallab.co.kr/og-image-wide.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-
-<!-- 트위터 카드 -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="H VIRAL LAB | 디지털 유입 시스템 R&D 센터">
-<meta name="twitter:description" content="브랜드의 온라인 유입 흐름을 기반으로 디지털 유입 시스템을 연구·개발하는 전문 R&D 센터입니다.">
-<meta name="twitter:image" content="https://hvirallab.co.kr/og-image-wide.png">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="H VIRAL LAB 인사이트 | 에이치바이럴 디지털 유입 분석 리포트">
-  <meta property="og:description" content="검색-탐색-신뢰-전환 흐름을 바탕으로 고객 행동과 유입 구조를 분석한 H VIRAL LAB 인사이트 아카이브.">
+  <!-- OG 태그 -->
+  <meta property="og:title" content="H VIRAL LAB 인사이트 | 디지털 유입 시스템 분석 리포트">
+  <meta property="og:description" content="산업별 고객 여정, 검색 패턴, 디지털 유입 구조를 정리한 H VIRAL LAB 인사이트 리포트 아카이브입니다.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hvirallab.co.kr/insight/">
-  <meta property="og:image" content="https://hvirallab.co.kr/og-image.png">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="H VIRAL LAB 인사이트 | 에이치바이럴 디지털 유입 분석">
-  <meta name="twitter:description" content="에이치바이럴 연구소의 고객 여정·검색 데이터 기반 디지털 유입 인사이트 보고서.">
-  <meta name="twitter:image" content="https://hvirallab.co.kr/og-image.png">
-
-  <meta property="og:title" content="H VIRAL LAB | 디지털 유입 시스템 R&D 센터">
-<meta property="og:description" content="브랜드의 온라인 유입 구조를 연구·개발하는 H VIRAL LAB 공식 페이지입니다.">
-<meta property="og:image" content="https://hvirallab.co.kr/og-image.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hvirallab.co.kr">
+  <meta property="og:image" content="https://hvirallab.co.kr/og-image-wide.png">
 
   <!-- 파비콘 -->
   <link rel="icon" type="image/svg+xml" href="/favicon-16x16.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-</head>
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { width: 100%; max-width: 100%; overflow-x: hidden; scroll-behavior: smooth; }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
@@ -68,21 +41,34 @@
 
     a { color: inherit; text-decoration: none; }
     ul { list-style: none; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 헤더 (index와 동일 구조) */
     header {
       position: sticky;
       top: 0;
       z-index: 50;
       backdrop-filter: blur(14px);
-      background: rgba(3,7,18,0.8);
+      background: linear-gradient(to bottom, rgba(3,7,18,0.9), rgba(3,7,18,0.6));
       border-bottom: 1px solid rgba(148,163,184,0.3);
     }
 
     .nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       height: 64px;
+    }
+
+    .logo-area {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .logo-main {
@@ -98,175 +84,227 @@
       margin-top: 2px;
     }
 
+    .logo-area,
+    .logo-main,
+    .logo-sub {
+      white-space: nowrap;
+    }
+
     .nav-menu {
       display: flex;
-      gap: 24px;
+      align-items: center;
+      gap: 26px;
       font-size: 14px;
+      flex-wrap: nowrap;
     }
 
-    .nav-menu a:hover { color: #fff; }
-
-    /* HERO */
-    .hero {
-      padding: 72px 0 60px;
+    .nav-menu a {
+      position: relative;
+      padding-bottom: 4px;
+      color: #d1d5db;
     }
 
-    .hero-title {
-      font-size: 30px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 16px;
+    .nav-menu a:hover {
+      color: #ffffff;
     }
 
-    .hero-desc {
-      font-size: 15px;
-      color: #cbd5f5;
+    /* 페이지 히어로 */
+    .page-hero {
+      padding: 72px 0 40px;
     }
 
-    /* SECTION */
-    section {
-      padding: 40px 0;
-      border-top: 1px solid rgba(51,65,85,0.7);
-      background: radial-gradient(circle at top left, rgba(15,23,42,0.94), #020617 60%);
-    }
-
-    .section-title {
-      font-size: 21px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .section-desc {
-      font-size: 14px;
-      color: #cbd5f5;
-      margin-bottom: 20px;
-      line-height: 1.7;
-    }
-
-    /* INSIGHT GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      border-radius: 16px;
-      background: radial-gradient(circle at top left, rgba(30,64,175,0.55), rgba(15,23,42,0.98));
-      border: 1px solid rgba(75,85,99,0.9);
-      padding: 18px 16px;
-      box-shadow: 0 16px 38px rgba(0,0,0,0.45);
-    }
-
-    .card-kicker {
-      font-size: 11px;
-      letter-spacing: 0.15em;
-      color: #9ca3af;
-      margin-bottom: 8px;
-    }
-
-    .card-title {
-      font-size: 15px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .card-meta {
+    .page-kicker {
       font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
       color: #9ca3af;
-      line-height: 1.5;
     }
 
-    @media (max-width: 900px) {
-      .grid { grid-template-columns: repeat(2,1fr); }
+    .page-title {
+      margin-top: 12px;
+      font-size: 26px;
+      font-weight: 800;
     }
 
-    @media (max-width: 640px) {
-      .grid { grid-template-columns: repeat(1,1fr); }
-      .hero-title { font-size: 24px; }
+    .page-sub {
+      margin-top: 14px;
+      font-size: 14px;
+      color: #cbd5f5;
+    }
+
+    /* 인사이트 카드 리스트 */
+    .insight-section {
+      padding: 0 0 56px;
+    }
+
+    .insight-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .insight-card {
+      border-radius: 18px;
+      padding: 18px 20px 16px;
+      background: radial-gradient(circle at top left,
+        rgba(37, 99, 235, 0.5),
+        rgba(15, 23, 42, 0.95));
+      border: 1px solid rgba(148,163,184,0.5);
+    }
+
+    .insight-label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: #bfdbfe;
+      text-transform: uppercase;
+    }
+
+    .insight-title {
+      margin-top: 8px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .insight-desc {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #e5e7eb;
+      opacity: 0.9;
     }
 
     footer {
       border-top: 1px solid rgba(31,41,55,0.9);
-      padding: 20px 0;
+      padding: 18px 0 22px;
       font-size: 11px;
-      color: #9ca3af;
       text-align: center;
+      color: #9ca3af;
       background: #020617;
     }
 
+    /* 모바일 */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .nav {
+        height: auto;
+        padding: 10px 0 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .logo-main {
+        font-size: 18px;
+      }
+
+      .logo-sub {
+        font-size: 9px;
+        letter-spacing: 0.14em;
+      }
+
+      .nav-menu {
+        width: 100%;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        column-gap: 18px;
+        font-size: 13px;
+      }
+
+      .nav-menu a {
+        padding-bottom: 2px;
+      }
+
+      .page-hero {
+        padding: 56px 0 32px;
+      }
+
+      .page-title {
+        font-size: 22px;
+      }
+
+      .page-sub {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .nav-menu {
+        column-gap: 14px;
+      }
+
+      .page-title {
+        font-size: 20px;
+      }
+
+      .page-sub {
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
-
 <body>
-
-<header>
-  <div class="container nav">
-    <a href="/" class="logo-area">
-      <span class="logo-main">H VIRAL LAB</span>
-      <span class="logo-sub">R&D · RESEARCH &amp; INSIGHT</span>
-    </a>
-    <nav class="nav-menu">
-      <a href="/introduction/">소개</a>
-      <a href="/insight/">인사이트</a>
-      <a href="/case/">연구사례</a>
-      <a href="/datalab/">데이터랩</a>
-      <a href="/project/">프로젝트</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h1 class="hero-title">디지털 유입 구조 인사이트</h1>
-      <p class="hero-desc">
-        업종별 고객 행동, 검색 의도, 문제 인식 흐름을 기반으로  
-        **디지털 유입 구조를 기술적으로 해석한 리포트형 아카이브**입니다.
-      </p>
+  <header>
+    <div class="container nav">
+      <a href="/" class="logo-area">
+        <span class="logo-main">H VIRAL LAB</span>
+        <span class="logo-sub">R&D · RESEARCH &amp; INSIGHT</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="/introduction/">소개</a>
+        <a href="/insight/">인사이트</a>
+        <a href="/case/">연구사례</a>
+        <a href="/datalab/">데이터랩</a>
+        <a href="/project/">프로젝트</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- INSIGHT LIST -->
-  <section>
-    <div class="container">
-      <div class="section-title">INSIGHT REPORTS</div>
-      <p class="section-desc">
-        검색–탐색–신뢰–전환으로 이어지는 디지털 풀퍼널의 구조적 특징을  
-        산업별/의도별로 분류한 리서치 자료입니다.
-      </p>
-
-      <div class="grid">
-
-        <div class="card">
-          <div class="card-kicker">REPORT 01</div>
-          <div class="card-title">소상공인 디지털 풀퍼널 구조</div>
-          <div class="card-meta">검색 → 정보탐색 → 비교 → 문의 단계별 구조 분석</div>
-        </div>
-
-        <div class="card">
-          <div class="card-kicker">REPORT 02</div>
-          <div class="card-title">문제 인식 기반 검색 의도 패턴</div>
-          <div class="card-meta">고객의 ‘문제 정의’가 유입 퍼널에 미치는 영향</div>
-        </div>
-
-        <div class="card">
-          <div class="card-kicker">REPORT 03</div>
-          <div class="card-title">브랜드 검색과 신뢰 형성 메커니즘</div>
-          <div class="card-meta">신뢰 구축 요소의 우선순위 분석</div>
-        </div>
-
+  <main>
+    <!-- 상단 설명 영역 -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-kicker">DIGITAL INSIGHT ARCHIVE</div>
+        <h1 class="page-title">디지털 유입 시스템 인사이트</h1>
+        <p class="page-sub">
+          H VIRAL LAB이 산업별 고객 여정, 검색 패턴, 디지털 유입 구조를<br>
+          데이터 관점에서 정리한 인사이트 아카이브입니다.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-</main>
+    <!-- 인사이트 리스트 영역 -->
+    <section class="insight-section">
+      <div class="container">
+        <div class="insight-grid">
+          <article class="insight-card">
+            <div class="insight-label">INSIGHT 01</div>
+            <h2 class="insight-title">소상공인 디지털 유입 풀퍼널 구조</h2>
+            <p class="insight-desc">
+              ‘검색 → 정보탐색 → 비교 → 문의’로 이어지는 소상공인 디지털 풀퍼널을
+              실제 검색 패턴과 유입 데이터를 기반으로 해석한 인사이트입니다.
+            </p>
+          </article>
 
-<footer>
-  © H VIRAL LAB. All rights reserved.
-</footer>
+          <article class="insight-card">
+            <div class="insight-label">INSIGHT 02</div>
+            <h2 class="insight-title">검색 키워드와 문제 인식 단계의 연결</h2>
+            <p class="insight-desc">
+              고객의 문제 인식 정도에 따라 어떤 검색어를 사용하게 되는지,
+              상·중·하단 퍼널별 키워드 패턴을 정리한 리포트입니다.
+            </p>
+          </article>
 
+          <!-- 필요하면 여기 아래로 인사이트 카드 계속 추가 -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © H VIRAL LAB. All rights reserved.
+    본 사이트는 디지털 유입 구조 R&D 연구소 인사이트 페이지입니다.
+  </footer>
 </body>
 </html>

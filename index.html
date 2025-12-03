@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- 필수 메타 태그 -->
-  <meta name="description" content="H VIRAL LAB | 에이치바이럴 디지털 유입 R&D 센터. 검색-탐색-신뢰-전환으로 이어지는 디지털 풀퍼널과 산업별 유입 구조를 연구하는 전문 연구소입니다.">
+  <meta name="description" content="H VIRAL LAB | 에이치바이럴 디지털 유입 R&D 센터. 디지털 접점에서 발생하는 데이터 신호를 기반으로 유입 흐름과 전환 구조를 설계·검증하는 전문 연구소입니다.">
   <meta name="keywords" content="에이치바이럴, H VIRAL, H VIRAL LAB, 디지털 유입 구조, R&D, 마케팅 연구소, 데이터 기반 마케팅">
 
   <!-- 기본 OG 태그 -->
   <meta property="og:title" content="H VIRAL LAB | 디지털 유입 시스템 R&D 센터">
-  <meta property="og:description" content="브랜드의 온라인 유입 흐름을 기반으로 디지털 유입 시스템을 연구·개발하는 전문 R&D 센터입니다.">
+  <meta property="og:description" content="브랜드의 온라인 디지털 접점을 기반으로 유입 흐름과 전환 구조를 연구·개발하는 에이치바이럴의 전문 R&D 센터입니다.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hvirallab.co.kr/">
   <!-- 정사각형 OG 이미지 -->
@@ -24,7 +24,7 @@
   <!-- 트위터 카드 -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="H VIRAL LAB | 디지털 유입 시스템 R&D 센터">
-  <meta name="twitter:description" content="브랜드의 온라인 유입 흐름을 기반으로 디지털 유입 시스템을 연구·개발하는 전문 R&D 센터입니다.">
+  <meta name="twitter:description" content="브랜드의 디지털 접점에서 발생하는 데이터 신호를 분석해 유입 구조와 전환 모델을 설계·검증하는 R&D 센터입니다.">
   <meta name="twitter:image" content="https://hvirallab.co.kr/og-image-wide.png">
 
   <!-- 파비콘 -->
@@ -206,6 +206,34 @@
       max-width: 100%;
     }
 
+    .hero-actions {
+      margin-top: 22px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-link-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: radial-gradient(
+        circle at top left,
+        rgba(59, 130, 246, 0.4),
+        rgba(15, 23, 42, 0.95)
+      );
+      font-size: 13px;
+      font-weight: 500;
+      color: #e5e7eb;
+    }
+
+    .hero-link-btn:hover {
+      border-color: rgba(129, 140, 248, 0.9);
+    }
+
     footer {
       border-top: 1px solid rgba(31, 41, 55, 0.9);
       padding: 18px 0 22px;
@@ -223,17 +251,17 @@
         padding: 0 16px;
       }
 
-      /* ✅ 모바일에서 헤더 구조 분리: 위에 로고, 아래에 메뉴, 둘 다 가운데 정렬 */
+      /* 모바일: 로고/메뉴 모두 중앙 정렬 */
       .nav {
         height: auto;
         padding: 10px 0 8px;
         flex-direction: column;
-        align-items: center;   /* 가운데 정렬 */
+        align-items: center;
         gap: 8px;
       }
 
       .logo-area {
-        align-items: center;   /* 로고 텍스트도 가운데로 */
+        align-items: center;
       }
 
       .logo-main {
@@ -251,7 +279,7 @@
         row-gap: 8px;
         column-gap: 18px;
         font-size: 13px;
-        justify-content: center; /* 메뉴 가운데 정렬 */
+        justify-content: center;
         text-align: center;
       }
 
@@ -293,6 +321,17 @@
         justify-content: center;
         text-align: center;
         padding: 7px 10px;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-link-btn {
+        width: 100%;
+        max-width: 270px;
+        font-size: 12px;
+        padding: 9px 16px;
       }
     }
 
@@ -338,17 +377,24 @@
         </div>
 
         <h1 class="hero-title">
-          에이치바이럴 마케팅 연구소 시스템을 설계하다.
+          에이치바이럴 연구소, 디지털 유입 시스템을 설계하다.
         </h1>
 
         <p class="hero-sub">
-          H VIRAL LAB은 브랜드의 온라인 유입 흐름을 <strong>데이터와 구조</strong>의 관점에서 해석합니다.<br />
-          검색 → 탐색 → 신뢰 → 전환으로 이어지는 디지털 풀퍼널을 분석하고,<br />
-          산업별 환경에 맞는 <strong>디지털 유입 시스템</strong>을 연구·개발합니다.
+          H VIRAL LAB은 브랜드가 온라인에서 마주하는 모든 디지털 접점을
+          <strong>데이터 시그널</strong> 관점에서 해석하고,<br />
+          산업별 환경에 맞는 <strong>end-to-end 유입 시스템</strong>과
+          운영 시나리오를 연구·개발합니다.
         </p>
 
         <div class="hero-pill-slider">
           <span id="pillText">H VIRAL LAB · DIGITAL ACQUISITION R&amp;D</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="https://hviral.co.kr" class="hero-link-btn" target="_blank" rel="noopener noreferrer">
+            서비스 무브 바로가기
+          </a>
         </div>
       </div>
     </section>
@@ -378,4 +424,3 @@
   </script>
 </body>
 </html>
-

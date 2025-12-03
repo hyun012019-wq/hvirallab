@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>H VIRAL LAB Insight | Digital Intelligence & Research Briefing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- META -->
+  <meta name="description" content="H VIRAL LAB Insight. 디지털 접점, 유입 흐름, 전환 구조를 데이터 기반으로 해석한 인사이트 리포트. 에이치바이럴 R&D 센터의 연구 브리핑.">
+  <meta name="keywords" content="H VIRAL LAB, 에이치바이럴, 디지털 인사이트, R&D, Digital Funnel Insight, Research Briefing">
+
+  <!-- OG -->
+  <meta property="og:title" content="H VIRAL LAB Insight | Digital Intelligence & Research Briefing">
+  <meta property="og:description" content="디지털 접점, 유입 구조, 전환 흐름을 연구하는 H VIRAL LAB의 인사이트 브리핑.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hvirallab.co.kr/insight/">
+  <meta property="og:image" content="https://hvirallab.co.kr/og-image-wide.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="H VIRAL LAB Insight | Research Intelligence">
+  <meta name="twitter:description" content="디지털 유입 구조 및 사용자 여정을 연구하는 H VIRAL LAB의 인사이트 리포트.">
+  <meta name="twitter:image" content="https://hvirallab.co.kr/og-image-wide.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon-16x16.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+        "Noto Sans KR", system-ui, sans-serif;
+      background: radial-gradient(circle at top left,
+        #1f3b78 0,
+        #020617 55%,
+        #000 100%);
+      color: #e5e7eb;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* HEADER – 메인과 동일 구조 */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(
+        to bottom,
+        rgba(3, 7, 18, 0.9),
+        rgba(3, 7, 18, 0.6)
+      );
+      border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo-area {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    .logo-main {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .logo-sub {
+      font-size: 11px;
+      color: #9ca3af;
+      letter-spacing: 0.16em;
+      margin-top: 2px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 14px;
+      flex-wrap: nowrap;
+    }
+
+    .nav-menu a {
+      position: relative;
+      padding-bottom: 4px;
+      color: #d1d5db;
+    }
+
+    .nav-menu a:hover {
+      color: #ffffff;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 80px 0 52px;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: radial-gradient(
+        circle at top left,
+        rgba(56, 189, 248, 0.2),
+        rgba(15, 23, 42, 0.9)
+      );
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.22);
+    }
+
+    .hero-title {
+      font-size: 30px;
+      font-weight: 800;
+      margin-top: 20px;
+      line-height: 1.35;
+    }
+
+    .hero-sub {
+      margin-top: 18px;
+      font-size: 15px;
+      color: #cbd5f5;
+    }
+
+    /* INSIGHT LIST */
+    .insight-section {
+      padding: 0 0 64px;
+    }
+
+    .insight-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .insight-card {
+      border-radius: 18px;
+      padding: 20px 22px 18px;
+      background: radial-gradient(
+        circle at top left,
+        rgba(37, 99, 235, 0.45),
+        rgba(15, 23, 42, 0.95)
+      );
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .insight-label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: #bfdbfe;
+      text-transform: uppercase;
+    }
+
+    .insight-title {
+      margin-top: 8px;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .insight-desc {
+      margin-top: 10px;
+      font-size: 13px;
+      opacity: 0.92;
+    }
+
+    footer {
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 18px 0 22px;
+      font-size: 11px;
+      text-align: center;
+      color: #9ca3af;
+      background: #020617;
+    }
+
+    /* MOBILE – 메인과 동일 컨셉 */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .nav {
+        height: auto;
+        padding: 10px 0 8px;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .logo-area {
+        align-items: center;
+      }
+
+      .logo-main {
+        font-size: 18px;
+      }
+
+      .logo-sub {
+        font-size: 9px;
+        letter-spacing: 0.14em;
+      }
+
+      .nav-menu {
+        width: 100%;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        column-gap: 18px;
+        font-size: 13px;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero {
+        padding: 52px 0 40px;
+      }
+
+      .hero-title {
+        font-size: 23px;
+      }
+
+      .hero-sub {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .nav-menu {
+        column-gap: 14px;
+      }
+
+      .hero-title {
+        font-size: 21px;
+      }
+
+      .hero-sub {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a href="/" class="logo-area">
+        <span class="logo-main">H VIRAL LAB</span>
+        <span class="logo-sub">R&D · RESEARCH &amp; INSIGHT</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="/introduction/">소개</a>
+        <a href="/insight/">인사이트</a>
+        <a href="/case/">연구사례</a>
+        <a href="/datalab/">데이터랩</a>
+        <a href="/project/">프로젝트</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="badge-pill">
+          <span class="badge-dot"></span>
+          <span>INSIGHT BRIEFING · DIGITAL INTELLIGENCE</span>
+        </div>
+
+        <h1 class="hero-title">
+          Digital Insight for<br />
+          Long-Term Acquisition Architecture
+        </h1>
+
+        <p class="hero-sub">
+          H VIRAL LAB은 온라인에서 발생하는 모든 디지털 접점을<br />
+          단편적인 반응이 아닌 <strong>Signal · Pattern · Context</strong>의 조합으로 관찰합니다.<br />
+          산업별 환경에 맞는 사용자 여정과 유입 구조를 비교·분석하며<br />
+          장기적으로 유지 가능한 <strong>Acquisition Architecture</strong>에 대한 인사이트를 축적합니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- INSIGHT CARDS -->
+    <section class="insight-section">
+      <div class="container">
+        <div class="insight-grid">
+
+          <article class="insight-card">
+            <div class="insight-label">INSIGHT 01</div>
+            <h2 class="insight-title">Signal Density & Attention Curve</h2>
+            <p class="insight-desc">
+              사용자가 처음 접점을 인지한 순간부터 의사결정 직전까지의 흐름을
+              Signal Density와 Attention Curve 관점에서 정리합니다.
+              어떤 구간에서 관심이 축적되고, 어느 지점에서 이탈이 발생하는지
+              정량·정성 데이터로 함께 관찰합니다.
+            </p>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-label">INSIGHT 02</div>
+            <h2 class="insight-title">Funnel Role & Channel Positioning</h2>
+            <p class="insight-desc">
+              모든 접점이 동일한 역할을 수행하지 않습니다.
+              Awareness · Consideration · Conversion 단계별로
+              채널 역할과 Funnel Position을 구분해 분석하고,
+              중복·공백 구간을 식별해 구조적 개선 여지를 도출합니다.
+            </p>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-label">INSIGHT 03</div>
+            <h2 class="insight-title">Acquisition-to-Retention Bridge</h2>
+            <p class="insight-desc">
+              첫 유입만으로는 시스템이 완성되지 않습니다.
+              초기 Acquisition 이후 재방문·재구매로 이어지는
+              Retention Bridge를 구조적으로 정의하고,
+              접점 간 이동 경로와 커뮤니케이션 톤을 함께 점검합니다.
+            </p>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-label">INSIGHT 04</div>
+            <h2 class="insight-title">Industry Pattern Library</h2>
+            <p class="insight-desc">
+              각 업종은 서로 다른 제약과 기회를 가지고 있습니다.
+              H VIRAL LAB은 산업별로 반복적으로 등장하는 Funnel Pattern을
+              Library 형태로 축적하고,
+              새로운 프로젝트 설계 시 참고 가능한 기준선을 제공합니다.
+            </p>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-label">INSIGHT 05</div>
+            <h2 class="insight-title">Trust Layer & Proof Assets</h2>
+            <p class="insight-desc">
+              디지털 환경에서 신뢰 형성은 별도의 층(Layer)으로 다뤄져야 합니다.
+              이용 후기, 데이터 기반 근거, 운영 이력 등
+              다양한 Proof Asset이 어느 위치에서 노출될 때
+              전환 장벽을 완화하는지 구조적으로 정리합니다.
+            </p>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-label">INSIGHT 06</div>
+            <h2 class="insight-title">Automation Scenario Readiness</h2>
+            <p class="insight-desc">
+              자동화는 단순히 도구를 도입하는 문제가 아니라
+              시나리오와 Rule Set이 준비되어야 작동합니다.
+              Trigger · Condition · Action 단위로 분해해,
+              어떤 구간부터 자동화가 가능한지,
+              현재 구조의 준비 상태를 진단하는 관점을 제시합니다.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © H VIRAL LAB. All rights reserved.
+    본 사이트는 디지털 유입 구조 R&amp;D 연구소용으로 운영됩니다.
+  </footer>
+</body>
+</html>
